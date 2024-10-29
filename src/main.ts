@@ -1,16 +1,15 @@
-import { Assets, Container, Sprite, Text } from "pixi.js";
+import { Assets, Sprite, Text } from "pixi.js";
 import { World } from "miniplex";
 import * as engine from "./systems/engine";
 import "./style.css";
 
-const loading = async () => {
-  const view = new Container();
-
+const loading = (world: World<engine.Entity>) => async () => {
   const progress = new Text({
     text: "Loading...",
     style: { fill: 0xffffff },
   });
-  view.addChild(progress);
+
+  const entity = world.add({ transfrom: progress });
 
   Assets.add({
     alias: "bunny",
@@ -20,6 +19,10 @@ const loading = async () => {
   await Assets.load("bunny", (x) => {
     progress.text = `Loading... ${(x * 100).toFixed(1)}%`;
   });
+
+  return async () => {
+    world.remove(entity);
+  };
 };
 
 const game = (world: World<engine.Entity>) => {
@@ -37,6 +40,6 @@ const game = (world: World<engine.Entity>) => {
 engine.start(async (world, systems) => {
   const [{ engine }] = world.with("engine");
 
-  await engine.state.enter(loading);
+  await engine.state.enter(loading(world));
   await engine.state.enter(game(world));
 });

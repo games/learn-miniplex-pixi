@@ -15,7 +15,7 @@ export function transfromSystem(world: World<Entity>) {
   });
 
   entities.onEntityRemoved.subscribe((entity) => {
-    entity.parent?.transfrom?.removeChild(entity.transfrom);
+    entity.transfrom.parent?.removeChild(entity.transfrom);
   });
 
   return () => {};
