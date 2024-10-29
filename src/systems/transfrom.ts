@@ -10,7 +10,7 @@ export function transfromSystem(world: World<Entity>) {
     if (entity.parent?.transfrom) {
       entity.parent.transfrom.addChild(entity.transfrom);
     } else {
-      engine.scene.addChild(entity.transfrom);
+      engine.application.stage.addChild(entity.transfrom);
     }
   });
 

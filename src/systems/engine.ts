@@ -2,13 +2,14 @@ import { Bucket, World } from "miniplex";
 import { Application, Container, Ticker } from "pixi.js";
 import { transfromSystem } from "./transfrom";
 import { rotatingSystem } from "./rotating";
+import { controller, ScreenController } from "./screen";
 
 export type Entity = {
   transfrom?: Container;
   parent?: Entity;
   engine?: {
     application: Application;
-    scene: Container;
+    scene: ScreenController;
   };
   rotating?: {
     speed: number;
@@ -32,7 +33,7 @@ export async function start(
 
   const engine = {
     application,
-    scene: application.stage,
+    scene: controller(application),
   };
   world.add({ engine });
 
