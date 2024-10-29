@@ -1,11 +1,11 @@
 import { Bucket, World } from "miniplex";
 import { Application, Container, Ticker } from "pixi.js";
-import { transfromSystem } from "./transfrom";
+import { renderingSystem } from "./rendering";
 import { rotatingSystem } from "./rotating";
 import { stateManager, type StateManager } from "./state";
 
 export type Entity = {
-  transfrom?: Container;
+  view?: Container;
   parent?: Entity;
   engine?: {
     application: Application;
@@ -21,15 +21,14 @@ export type System = (ticker: Ticker) => void;
 export async function start(
   init: (world: World<Entity>, systems: Bucket<System>) => Promise<void>
 ) {
-  const world = new World<Entity>();
-  const systems = new Bucket<System>();
-
-  systems.add(transfromSystem(world));
-  systems.add(rotatingSystem(world));
-
   const application = new Application();
   await application.init({ background: "#1099bb", resizeTo: window });
   document.body.appendChild(application.canvas);
+
+  const world = new World<Entity>();
+  const systems = new Bucket<System>();
+  systems.add(renderingSystem(world, application));
+  systems.add(rotatingSystem(world));
 
   const engine = {
     application,

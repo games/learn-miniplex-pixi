@@ -9,7 +9,7 @@ const loading = (world: World<engine.Entity>) => async () => {
     style: { fill: 0xffffff },
   });
 
-  const entity = world.add({ transfrom: progress });
+  const entity = world.add({ view: progress });
 
   Assets.add({
     alias: "bunny",
@@ -30,9 +30,9 @@ const game = (world: World<engine.Entity>) => {
     for (let i = 0; i < 100; i++) {
       const sprite = Sprite.from("bunny");
       const rotating = Math.random() < 0.5 ? { speed: 0.01 } : undefined;
-      const entity = world.add({ transfrom: sprite, rotating });
+      const entity = world.add({ view: sprite, rotating });
 
-      entity.transfrom.position.set(Math.random() * 800, Math.random() * 600);
+      entity.view.position.set(Math.random() * 800, Math.random() * 600);
     }
   };
 };
