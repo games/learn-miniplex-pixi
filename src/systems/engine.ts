@@ -1,8 +1,8 @@
 import { Bucket, World } from "miniplex";
 import { Application, Container, Ticker } from "pixi.js";
 import { renderingSystem } from "./rendering";
-import { rotatingSystem } from "./rotating";
 import { stateManager, type StateManager } from "./state";
+import { City } from "../components";
 
 export type Entity = {
   view?: Container;
@@ -11,9 +11,8 @@ export type Entity = {
     application: Application;
     state: StateManager;
   };
-  rotating?: {
-    speed: number;
-  };
+
+  city?: City;
 };
 
 export type System = (ticker: Ticker) => void;
@@ -28,7 +27,7 @@ export async function start(
   const world = new World<Entity>();
   const systems = new Bucket<System>();
   systems.add(renderingSystem(world, application));
-  systems.add(rotatingSystem(world));
+  // systems.add(rotatingSystem(world));
 
   const engine = {
     application,
