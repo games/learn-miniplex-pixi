@@ -3,6 +3,9 @@ import { Application, Container, Ticker } from "pixi.js";
 import { renderingSystem } from "./rendering";
 import { stateManager, type StateManager } from "./state";
 import { City } from "../components";
+import { cityStats } from "./cityStats";
+
+type EntityTags = "city" | "cityStatsPanel";
 
 export type Entity = {
   view?: Container;
@@ -11,9 +14,34 @@ export type Entity = {
     application: Application;
     state: StateManager;
   };
+  tag?: EntityTags;
 
   city?: City;
+
+  cityStats?: {
+    city: City;
+    position: {
+      x: number;
+      y: number;
+    };
+  };
 };
+// } & Partial<
+//   | {
+//       tag: "city";
+//       city: City;
+//     }
+//   | {
+//       tag: "cityStatsPanel";
+//       cityStats: {
+//         city: City;
+//         position: {
+//           x: number;
+//           y: number;
+//         };
+//       };
+//     }
+// >;
 
 export type System = (ticker: Ticker) => void;
 
@@ -27,6 +55,7 @@ export async function start(
   const world = new World<Entity>();
   const systems = new Bucket<System>();
   systems.add(renderingSystem(world, application));
+  systems.add(cityStats(world));
   // systems.add(rotatingSystem(world));
 
   const engine = {

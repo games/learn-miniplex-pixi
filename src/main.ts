@@ -1,8 +1,9 @@
-import { Assets, Sprite, Text } from "pixi.js";
+import { Assets, Container, Sprite, Text } from "pixi.js";
 import { World } from "miniplex";
 import * as engine from "./systems/engine";
 import * as prefabs from "./prefabs";
 import "./style.css";
+import { CityStatsPanel } from "./views/CityStatsPanel";
 
 const loading = (world: World<engine.Entity>) => async () => {
   const progress = new Text({
@@ -28,12 +29,33 @@ const loading = (world: World<engine.Entity>) => async () => {
 
 const game = (world: World<engine.Entity>) => {
   return async () => {
+    const stage = world.add({ view: new Container() });
+    const map = world.add({ view: new Container(), parent: stage });
+    const hud = world.add({ view: new Container(), parent: stage });
+
+    const cityStats = world.add({
+      view: new CityStatsPanel(),
+      parent: hud,
+      tag: "cityStatsPanel",
+    });
+
     for (let i = 0; i < 3; i++) {
       const sprite = Sprite.from("bunny");
-      sprite.position.set(Math.random() * 350, Math.random() * 600);
+      sprite.anchor.set(0.5);
+      sprite.eventMode = "static";
+      sprite.position.set(Math.random() * 700, Math.random() * 900);
 
       const entity = prefabs.city.build("City " + i);
       entity.view = sprite;
+      entity.parent = map;
+
+      sprite.onmouseover = () => {
+        world.addComponent(cityStats, "cityStats", {
+          city: entity.city!,
+          position: { x: sprite.x, y: sprite.y },
+        });
+      };
+      sprite.onmouseout = () => world.removeComponent(cityStats, "cityStats");
 
       world.add(entity);
     }
