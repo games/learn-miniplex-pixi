@@ -11,15 +11,27 @@ importers:
       '@pixi/layout':
         specifier: ^2.0.1
         version: 2.0.1(pixi.js@8.5.2)
+      alea:
+        specifier: ^1.0.1
+        version: 1.0.1
       fp-ts:
         specifier: ^2.16.9
         version: 2.16.9
+      honeycomb-grid:
+        specifier: ^4.1.5
+        version: 4.1.5
       miniplex:
         specifier: ^2.0.0
         version: 2.0.0
       pixi.js:
         specifier: ^8.5.2
         version: 8.5.2
+      rot-js:
+        specifier: ^2.2.0
+        version: 2.2.0
+      simplex-noise:
+        specifier: ^4.0.3
+        version: 4.0.3
     devDependencies:
       prettier:
         specifier: ^3.3.3
@@ -332,6 +344,9 @@ packages:
     resolution: {integrity: sha512-2WALfTl4xo2SkGCYRt6rDTFfk9R1czmBvUQy12gK2KuRKIpWEhcbbzy8EZXtz/jkRqHX8bFEc6FC1HjX4TUWYw==}
     engines: {node: '>=10.0.0'}
 
+  alea@1.0.1:
+    resolution: {integrity: sha512-QU+wv+ziDXaMxRdsQg/aH7sVfWdhKps5YP97IIwFkHCsbDZA3k87JXoZ5/iuemf4ntytzIWeScrRpae8+lDrXA==}
+
   assertion-error@2.0.1:
     resolution: {integrity: sha512-Izi8RQcffqCeNVgFigKli1ssklIbpHnCYc6AknXGYoB6grJqyeby7jv12JUQgmTAnIDnbck1uxksT4dzN3PWBA==}
     engines: {node: '>=12'}
@@ -390,6 +405,10 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
+  honeycomb-grid@4.1.5:
+    resolution: {integrity: sha512-VrnQwu5dHuzqK3wFhLD9EURmLSyEWb0teiHhDJq6WdK0MrFsEtKNYT1HLzXOLe2X1acU8Y9hhK7wWfIiGK1G5w==}
+    engines: {node: '>=16'}
+
   ismobilejs@1.1.1:
     resolution: {integrity: sha512-VaFW53yt8QO61k2WJui0dHf4SlL8lxBofUuUmwBo0ljPk0Drz2TiuDW4jo3wDcv41qy/SxrJ+VAzJ/qYqsmzRw==}
 
@@ -440,8 +459,14 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
+  rot-js@2.2.0:
+    resolution: {integrity: sha512-DlqvRiOl3LnwTuActd+nMcj9tt9uycPaDezb2bJVDqXMdPJ2dkO3daJ5c/q+fYcKvIY9P5FUl9Tp24llClUFig==}
+
   siginfo@2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
+
+  simplex-noise@4.0.3:
+    resolution: {integrity: sha512-qSE2I4AngLQG7BXqoZj51jokT4WUXe8mOBrvfOXpci8+6Yu44+/dD5zqDpOx3Ux792eamTd2lLcI8jqFntk/lg==}
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -741,6 +766,8 @@ snapshots:
 
   '@xmldom/xmldom@0.8.10': {}
 
+  alea@1.0.1: {}
+
   assertion-error@2.0.1: {}
 
   cac@6.7.14: {}
@@ -803,6 +830,8 @@ snapshots:
 
   fsevents@2.3.3:
     optional: true
+
+  honeycomb-grid@4.1.5: {}
 
   ismobilejs@1.1.1: {}
 
@@ -874,7 +903,11 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.24.2
       fsevents: 2.3.3
 
+  rot-js@2.2.0: {}
+
   siginfo@2.0.0: {}
+
+  simplex-noise@4.0.3: {}
 
   source-map-js@1.2.1: {}
 

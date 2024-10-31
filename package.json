@@ -19,8 +19,12 @@
   },
   "dependencies": {
     "@pixi/layout": "^2.0.1",
+    "alea": "^1.0.1",
     "fp-ts": "^2.16.9",
+    "honeycomb-grid": "^4.1.5",
     "miniplex": "^2.0.0",
-    "pixi.js": "^8.5.2"
+    "pixi.js": "^8.5.2",
+    "rot-js": "^2.2.0",
+    "simplex-noise": "^4.0.3"
   }
 }
