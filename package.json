@@ -16,6 +16,7 @@
     "vitest": "^2.1.4"
   },
   "dependencies": {
+    "@pixi/layout": "^2.0.1",
     "fp-ts": "^2.16.9",
     "miniplex": "^2.0.0",
     "pixi.js": "^8.5.2"

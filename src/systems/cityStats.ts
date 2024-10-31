@@ -20,8 +20,8 @@ export function cityStats(world: World<Entity>) {
 
     if (panel.view instanceof CityStatsPanel) {
       panel.view.visible = true;
-      panel.view.position.set(cityStats.position.x, cityStats.position.y);
       panel.view.update(cityStats.city);
+      panel.view.position.set(cityStats.position.x, cityStats.position.y);
     }
   };
 }
