@@ -1,3 +1,3 @@
-import * as city from "./city";
+import * as city from './city'
 
-export { city };
+export { city }
