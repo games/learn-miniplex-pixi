@@ -30,7 +30,7 @@ export class Map extends Container {
             rectangle({ width: data.width, height: data.height })
         )
         grid.forEach((hex) => {
-            const index = hex.col * data.width + hex.row
+            const index = hex.row * data.width + hex.col
             const cell = data.cells[index]
             const { x, y } = hexToPoint(hex)
             const region = new Region({ size, cell })

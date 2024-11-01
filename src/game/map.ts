@@ -63,8 +63,8 @@ export function create(options: CreateOptions): MapData {
 
     const cells: Cell[] = []
     const walkable: Cell[] = []
-    for (let x = 0; x < width; x++) {
-        for (let y = 0; y < height; y++) {
+    for (let y = 0; y < height; y++) {
+        for (let x = 0; x < width; x++) {
             const nx = x * 0.225 * continentRoughness + displacement
             const ny = y * 0.225 * continentRoughness + displacement
             const n = noise(nx, ny)
@@ -87,7 +87,7 @@ export function create(options: CreateOptions): MapData {
 
     const empires = placeEmpires(options.empires, walkable)
 
-    return { cells: cells, empires, width, height }
+    return { cells, empires, width, height }
 }
 
 export function create2(options: CreateOptions): MapData {
@@ -136,7 +136,7 @@ export function create2(options: CreateOptions): MapData {
     const empires = placeEmpires(options.empires, walkable)
 
     return {
-        cells: cells,
+        cells,
         empires,
         width: options.width,
         height: options.height,
