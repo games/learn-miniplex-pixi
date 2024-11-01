@@ -7,6 +7,7 @@ import { Entity } from '../entity'
 import { economy } from './economy'
 import { expanding } from './expanding'
 import { war } from './war'
+import { time } from './time'
 
 export type System = (ticker: Ticker) => void
 
@@ -19,11 +20,12 @@ export async function start(
 
     const world = new World<Entity>()
     const systems = new Bucket<System>()
-    systems.add(renderingSystem(world, application))
+    systems.add(time(world))
     systems.add(cityStats(world))
     systems.add(economy(world))
     systems.add(expanding(world))
     systems.add(war(world))
+    systems.add(renderingSystem(world, application))
 
     const engine = {
         application,
