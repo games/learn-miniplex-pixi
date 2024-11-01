@@ -6,6 +6,7 @@ import { CityStatsPanel } from './views/CityStatsPanel'
 import * as MapData from './game/map'
 import { Entity } from './entity'
 import { Map } from './views/hexagons/Map'
+import { GameTime } from './views/GameTime'
 
 const loading = (world: World<Entity>) => async () => {
     const progress = new Text({
@@ -41,6 +42,10 @@ const game = (world: World<Entity>) => {
             tag: 'cityStatsPanel',
         })
 
+        const gameTime = new GameTime()
+        gameTime.position.set(20, 10)
+        world.add({ view: gameTime, time: { year: 218, month: 0, day: 0 } })
+
         const mapData = MapData.create2({
             seed: 2,
             width: 50,
@@ -48,10 +53,10 @@ const game = (world: World<Entity>) => {
             continentRoughness: 0.4,
             displacement: 20000,
             waterLevel: 0.4,
-            empires: 1,
+            empires: 2,
         })
         const mapView = new Map({ data: mapData, size: 10 })
-        mapView.position.set(20, 20)
+        mapView.position.set(20, 50)
         const mapEntity = world.add({
             view: mapView,
             parent: map,

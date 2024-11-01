@@ -32,6 +32,14 @@ export type MapEntity = {
     mapData: MapData
 }
 
+export type GameTimeEntity = {
+    time: {
+        year: number
+        month: number
+        day: number
+    }
+}
+
 export type Entity = {
     parent?: Entity
     engine?: {
@@ -40,6 +48,7 @@ export type Entity = {
     }
     tag?: EntityTags
 } & Partial<RenderableEntity> &
+    Partial<GameTimeEntity> &
     Partial<CityEntity> &
     Partial<CityStatsPanelEntity> &
     Partial<EmpireEntity> &
