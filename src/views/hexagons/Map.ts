@@ -12,6 +12,7 @@ import {
     rectangle,
 } from 'honeycomb-grid'
 import { isNumber } from 'fp-ts/lib/number'
+import { Signal } from 'typed-signals'
 
 type MapOptions = {
     data: MapData
@@ -21,6 +22,9 @@ type MapOptions = {
 export class Map extends Container {
     private readonly regions: Record<string, Region> = {}
     private readonly grid: Grid<Hex>
+
+    public readonly regionOvered: Signal<(x: Region) => void> = new Signal()
+    public readonly regionOuted: Signal<() => void> = new Signal()
 
     constructor({ data, size }: MapOptions) {
         super()
@@ -54,6 +58,9 @@ export class Map extends Container {
                     region.alpha = 1
                 })
                 region.alpha = 0.5
+                this.regionOvered.emit(region)
+            } else {
+                this.regionOuted.emit()
             }
         }
 
@@ -83,7 +90,7 @@ export class Map extends Container {
             .filter((x) => x !== undefined)
     }
 
-    render() {
+    refresh() {
         Object.values(this.regions).forEach((region) => {
             region.render()
         })

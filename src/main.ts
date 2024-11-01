@@ -2,7 +2,7 @@ import { Assets, Container, Text } from 'pixi.js'
 import { World } from 'miniplex'
 import * as engine from './systems/engine'
 import './style.css'
-import { CityStatsPanel } from './views/CityStatsPanel'
+import { EmpireStatsPanel } from './views/EmpireStatsPanel'
 import * as MapData from './game/map'
 import { Entity } from './entity'
 import { Map } from './views/hexagons/Map'
@@ -36,10 +36,10 @@ const game = (world: World<Entity>) => {
         const map = world.add({ view: new Container(), parent: stage })
         const hud = world.add({ view: new Container(), parent: stage })
 
-        const cityStats = world.add({
-            view: new CityStatsPanel(),
+        const empireStatsView = new EmpireStatsPanel()
+        const empireStats = world.add({
+            view: empireStatsView,
             parent: hud,
-            tag: 'cityStatsPanel',
         })
 
         const gameTime = new GameTime()
@@ -48,15 +48,29 @@ const game = (world: World<Entity>) => {
 
         const mapData = MapData.create2({
             seed: 2,
-            width: 50,
-            height: 50,
+            width: 40,
+            height: 40,
             continentRoughness: 0.4,
             displacement: 20000,
             waterLevel: 0.4,
-            empires: 2,
+            empires: 10,
         })
-        const mapView = new Map({ data: mapData, size: 10 })
+        const mapView = new Map({ data: mapData, size: 15 })
         mapView.position.set(20, 50)
+        mapView.regionOvered.connect((cell) => {
+            // FIXME: this is a hack to update the empireStats component
+            world.removeComponent(empireStats, 'empireStats')
+            world.addComponent(empireStats, 'empireStats', {
+                region: cell.cell,
+                position: {
+                    x: cell.position.x + mapView.x + 10,
+                    y: cell.position.y + mapView.y + 10,
+                },
+            })
+        })
+        mapView.regionOuted.connect(() => {
+            world.removeComponent(empireStats, 'empireStats')
+        })
         const mapEntity = world.add({
             view: mapView,
             parent: map,
@@ -66,12 +80,12 @@ const game = (world: World<Entity>) => {
             if (cell.empire) {
                 world.add({
                     empire: cell.empire,
-                    mapCoord: { x: cell.x, y: cell.y },
+                    mapCell: cell,
                     parent: mapEntity,
                 })
             } else {
                 world.add({
-                    mapCoord: { x: cell.x, y: cell.y },
+                    mapCell: cell,
                     parent: mapEntity,
                 })
             }

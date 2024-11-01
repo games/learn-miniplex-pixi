@@ -2,7 +2,7 @@ import { createNoise2D } from 'simplex-noise'
 import { Cell, Empire, MapData } from './objects'
 import { findFirst } from 'fp-ts/lib/Array'
 import Alea from 'alea'
-import { Map, RNG } from 'rot-js'
+import { Map } from 'rot-js'
 import { shuffle } from '../utils/shuffle'
 import { nameColors } from '../utils/colors'
 
@@ -37,13 +37,9 @@ function placeEmpires(count: number, cells: Cell[]) {
                     y: cell.y,
                 },
                 color: colors[i],
-                expanding: false,
                 economy: 0,
                 stability: 0,
-                warTargets: [],
-                peaceDeals: [],
-                borderEmpires: [],
-                borderCount: 0,
+                borderEmpires: new Set<Empire>(),
                 age: 0,
                 regions: [],
                 wars: [],
@@ -75,6 +71,8 @@ export function create(options: CreateOptions): MapData {
                 savedColor: 0,
                 isClustered: false,
                 isBlocked: true,
+                isBattlefront: false,
+                isAtWar: false,
             }
             if (n > (waterLevel - 0.5) * 2) {
                 cell.color = 0xffffff
@@ -93,7 +91,6 @@ export function create(options: CreateOptions): MapData {
 export function create2(options: CreateOptions): MapData {
     const gen =
         // new Map.Digger(options.width, options.height)
-
         new Map.Cellular(options.width, options.height, {
             born: [4, 5, 6, 7, 8],
             survive: [2, 3, 4, 5],
@@ -113,6 +110,8 @@ export function create2(options: CreateOptions): MapData {
             savedColor: 0,
             isClustered: false,
             isBlocked,
+            isBattlefront: false,
+            isAtWar: false,
         }
         cells.push(cell)
         if (!isBlocked) {

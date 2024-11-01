@@ -8,6 +8,8 @@ export type Cell = {
     savedColor: number
     isClustered: boolean
     isBlocked: boolean
+    isBattlefront: boolean
+    isAtWar: boolean
 }
 
 type Capital = {
@@ -19,13 +21,10 @@ export type Empire = {
     name: string
     capital: Capital
     color: ColorSource
-    expanding: boolean
     economy: number
     stability: number
-    warTargets: string[]
-    peaceDeals: string[]
-    borderEmpires: string[]
-    borderCount: number
+
+    borderEmpires: Set<Empire>
     age: number
 
     regions: Cell[]
@@ -33,11 +32,10 @@ export type Empire = {
 }
 
 export type WarDeclaration = {
-    empireA: Empire
-    empireB: Empire
-
-    isRebellion: boolean
-    isLiberation: boolean
+    attacker: Empire
+    defender: Empire
+    battlefield: Cell
+    startedAt: number
 }
 
 export type MapData = {

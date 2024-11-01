@@ -37,6 +37,10 @@ export class Region extends Container {
         const g = new Graphics(caches[k])
         this.addChild(g)
 
+        if (this.options.cell.isAtWar) {
+            g.tint = 0xff0000
+        }
+
         if (this.options.cell.empire) {
             const empire = new Empire({
                 color: this.options.cell.empire.color,

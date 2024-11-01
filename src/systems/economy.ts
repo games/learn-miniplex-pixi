@@ -21,7 +21,7 @@ export function economy(world: World<Entity>) {
                           -0.55 * Math.pow(empire.regions.length - 20, 1.3)) /
                       3) /
                     (empire.wars.length + 1)
-            empire.economy += delta
+            empire.economy += Math.ceil(delta)
             empire.economy = clamp(empire.economy, 0, 500000)
         }
     }

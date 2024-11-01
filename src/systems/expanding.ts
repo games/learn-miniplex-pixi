@@ -5,8 +5,8 @@ import { Map } from '../views/hexagons/Map'
 
 export function expanding(world: World<Entity>) {
     const maps = world.with('mapData')
-    const empires = world.with('empire', 'mapCoord')
-    const cells = world.with('mapCoord')
+    const empires = world.with('empire', 'mapCell')
+    const cells = world.with('mapCell')
 
     let lastUpdate = 0
 
@@ -23,13 +23,20 @@ export function expanding(world: World<Entity>) {
         const mapView = map.view as Map
         const occupiedCells = []
         for (const entity of empires) {
-            const { empire, mapCoord } = entity
-            const neighbors = mapView.neighbors(mapCoord.x, mapCoord.y)
+            const { empire, mapCell } = entity
+            const neighbors = mapView.neighbors(mapCell.x, mapCell.y)
             for (const neighbor of neighbors) {
                 if (!neighbor.cell.empire && !neighbor.cell.isBlocked) {
                     neighbor.cell.empire = empire
                     empire.regions.push(neighbor.cell)
                     occupiedCells.push(neighbor.cell)
+                } else if (
+                    neighbor.cell.empire &&
+                    neighbor.cell.empire !== empire
+                ) {
+                    empire.borderEmpires.add(neighbor.cell.empire)
+                    mapCell.isBattlefront = true
+                    neighbor.cell.isBattlefront = true
                 }
             }
         }
@@ -40,14 +47,13 @@ export function expanding(world: World<Entity>) {
             }
             const occupied = cells.where(
                 (element) =>
-                    element.mapCoord.x === cell.x &&
-                    element.mapCoord.y === cell.y
+                    element.mapCell.x === cell.x && element.mapCell.y === cell.y
             )
             for (const entity of occupied) {
                 world.addComponent(entity, 'empire', cell.empire)
             }
         }
 
-        mapView.render()
+        mapView.refresh()
     }
 }

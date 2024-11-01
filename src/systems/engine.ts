@@ -2,12 +2,13 @@ import { Bucket, World } from 'miniplex'
 import { Application, Ticker } from 'pixi.js'
 import { renderingSystem } from './rendering'
 import { stateManager } from './state'
-import { cityStats } from './cityStats'
+import { empireStats } from './empireStats'
 import { Entity } from '../entity'
+import { time } from './time'
 import { economy } from './economy'
 import { expanding } from './expanding'
-import { war } from './war'
-import { time } from './time'
+import { conquer } from './conquer'
+import { campaign } from './campaign'
 
 export type System = (ticker: Ticker) => void
 
@@ -21,10 +22,11 @@ export async function start(
     const world = new World<Entity>()
     const systems = new Bucket<System>()
     systems.add(time(world))
-    systems.add(cityStats(world))
+    systems.add(empireStats(world))
     systems.add(economy(world))
     systems.add(expanding(world))
-    systems.add(war(world))
+    systems.add(conquer(world))
+    systems.add(campaign(world))
     systems.add(renderingSystem(world, application))
 
     const engine = {
