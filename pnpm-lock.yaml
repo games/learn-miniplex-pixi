@@ -32,6 +32,9 @@ importers:
       simplex-noise:
         specifier: ^4.0.3
         version: 4.0.3
+      typed-signals:
+        specifier: ^3.0.0
+        version: 3.0.0
     devDependencies:
       prettier:
         specifier: ^3.3.3
@@ -496,6 +499,9 @@ packages:
     resolution: {integrity: sha512-n1cw8k1k0x4pgA2+9XrOkFydTerNcJ1zWCO5Nn9scWHTD+5tp8dghT2x1uduQePZTZgd3Tupf+x9BxJjeJi77Q==}
     engines: {node: '>=14.0.0'}
 
+  typed-signals@3.0.0:
+    resolution: {integrity: sha512-HpYkOenDGcyiNabkvJ7XC1FfTb4I/yx95GEblpXf1058C89eLBIJBlq4IMW2jFxju7NC2J5fTss2k2OPs27GiA==}
+
   typescript@5.6.3:
     resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
     engines: {node: '>=14.17'}
@@ -924,6 +930,8 @@ snapshots:
   tinyrainbow@1.2.0: {}
 
   tinyspy@3.0.2: {}
+
+  typed-signals@3.0.0: {}
 
   typescript@5.6.3: {}
 

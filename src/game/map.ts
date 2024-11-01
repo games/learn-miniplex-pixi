@@ -28,11 +28,14 @@ function placeEmpires(count: number, cells: Cell[]) {
     const empires: Empire[] = []
     const colors = shuffle(nameColors)()
     for (let i = 0; i < count; i++) {
-        const hex = randomPick(cells)
-        if (hex && hex.empire === undefined) {
+        const cell = randomPick(cells)
+        if (cell && cell.empire === undefined) {
             const empire = {
                 name: 'Empire ' + i,
-                capital: hex.x + ',' + hex.y,
+                capital: {
+                    x: cell.x,
+                    y: cell.y,
+                },
                 color: colors[i],
                 expanding: false,
                 economy: 0,
@@ -45,7 +48,7 @@ function placeEmpires(count: number, cells: Cell[]) {
                 regions: [],
                 wars: [],
             }
-            hex.empire = empire
+            cell.empire = empire
             empires.push(empire)
         }
     }
@@ -60,8 +63,8 @@ export function create(options: CreateOptions): MapData {
 
     const cells: Cell[] = []
     const walkable: Cell[] = []
-    for (let y = 0; y < height; y++) {
-        for (let x = 0; x < width; x++) {
+    for (let x = 0; x < width; x++) {
+        for (let y = 0; y < height; y++) {
             const nx = x * 0.225 * continentRoughness + displacement
             const ny = y * 0.225 * continentRoughness + displacement
             const n = noise(nx, ny)

@@ -10,9 +10,14 @@ export type Cell = {
     isBlocked: boolean
 }
 
+type Capital = {
+    x: number
+    y: number
+}
+
 export type Empire = {
     name: string
-    capital: string
+    capital: Capital
     color: ColorSource
     expanding: boolean
     economy: number

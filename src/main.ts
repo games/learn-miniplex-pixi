@@ -5,7 +5,7 @@ import './style.css'
 import { CityStatsPanel } from './views/CityStatsPanel'
 import * as MapData from './game/map'
 import { Entity } from './entity'
-import { HexMap } from './views/HexMap'
+import { Map } from './views/hexagons/Map'
 
 const loading = (world: World<Entity>) => async () => {
     const progress = new Text({
@@ -48,13 +48,28 @@ const game = (world: World<Entity>) => {
             continentRoughness: 0.4,
             displacement: 20000,
             waterLevel: 0.4,
-            empires: 16,
+            empires: 1,
         })
-        const mapView = new HexMap({ data: mapData, size: 20 })
+        const mapView = new Map({ data: mapData, size: 20 })
         mapView.position.set(100, 100)
-        const mapEntity = world.add({ view: mapView, parent: map })
-        for (const empire of mapData.empires) {
-            const empireEntity = world.add({ empire, parent: mapEntity })
+        const mapEntity = world.add({
+            view: mapView,
+            parent: map,
+            mapData,
+        })
+        for (const cell of mapData.cells) {
+            if (cell.empire) {
+                world.add({
+                    empire: cell.empire,
+                    mapCoord: { x: cell.x, y: cell.y },
+                    parent: mapEntity,
+                })
+            } else {
+                world.add({
+                    mapCoord: { x: cell.x, y: cell.y },
+                    parent: mapEntity,
+                })
+            }
         }
 
         // for (let i = 0; i < 3; i++) {
