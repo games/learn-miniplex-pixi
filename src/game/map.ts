@@ -93,30 +93,17 @@ export function create(options: CreateOptions): MapData {
 export function create2(options: CreateOptions): MapData {
     const gen =
         // new Map.Digger(options.width, options.height)
-        new Map.Cellular(options.width, options.height, {
-            topology: 6,
-            born: [4, 5, 6],
-            survive: [3, 4, 5, 6],
-        })
-    // gen.randomize(0.8)
 
-    /* initialize with irregularly random values */
-    const w = options.width
-    const h = options.height
-    for (let i = 0; i < w; i++) {
-        for (let j = 0; j < h; j++) {
-            const dx = i / w - 0.5
-            const dy = j / h - 0.5
-            const dist = Math.pow(dx * dx + dy * dy, 0.3)
-            if (RNG.getUniform() < dist) {
-                gen.set(i, j, 1)
-            }
-        }
-    }
+        new Map.Cellular(options.width, options.height, {
+            born: [4, 5, 6, 7, 8],
+            survive: [2, 3, 4, 5],
+        })
+
+    gen.randomize(0.9)
 
     const cells: Cell[] = []
     const walkable: Cell[] = []
-    gen.create((x, y, contents) => {
+    const creator = (x: number, y: number, contents: number) => {
         const isBlocked = contents === 1
         const color = isBlocked ? '#000000' : '#ffffff'
         const cell = {
@@ -131,7 +118,9 @@ export function create2(options: CreateOptions): MapData {
         if (!isBlocked) {
             walkable.push(cell)
         }
-    })
+    }
+
+    gen.create(creator)
 
     const empires = placeEmpires(options.empires, walkable)
 

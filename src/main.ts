@@ -41,17 +41,17 @@ const game = (world: World<Entity>) => {
             tag: 'cityStatsPanel',
         })
 
-        const mapData = MapData.create({
+        const mapData = MapData.create2({
             seed: 2,
-            width: 20,
-            height: 20,
+            width: 50,
+            height: 50,
             continentRoughness: 0.4,
             displacement: 20000,
             waterLevel: 0.4,
             empires: 1,
         })
-        const mapView = new Map({ data: mapData, size: 20 })
-        mapView.position.set(100, 100)
+        const mapView = new Map({ data: mapData, size: 10 })
+        mapView.position.set(20, 20)
         const mapEntity = world.add({
             view: mapView,
             parent: map,
