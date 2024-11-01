@@ -1,5 +1,5 @@
 import { createNoise2D } from 'simplex-noise'
-import { Cell, MapData } from './objects'
+import { Cell, Empire, MapData } from './objects'
 import { findFirst } from 'fp-ts/lib/Array'
 import Alea from 'alea'
 import { Map, RNG } from 'rot-js'
@@ -22,6 +22,34 @@ type CreateOptions = {
     displacement: number
     waterLevel: number
     empires: number
+}
+
+function placeEmpires(count: number, cells: Cell[]) {
+    const empires: Empire[] = []
+    const colors = shuffle(nameColors)()
+    for (let i = 0; i < count; i++) {
+        const hex = randomPick(cells)
+        if (hex && hex.empire === undefined) {
+            const empire = {
+                name: 'Empire ' + i,
+                capital: hex.x + ',' + hex.y,
+                color: colors[i],
+                expanding: false,
+                economy: 0,
+                stability: 0,
+                warTargets: [],
+                peaceDeals: [],
+                borderEmpires: [],
+                borderCount: 0,
+                age: 0,
+                regions: [],
+                wars: [],
+            }
+            hex.empire = empire
+            empires.push(empire)
+        }
+    }
+    return empires
 }
 
 export function create(options: CreateOptions): MapData {
@@ -54,30 +82,7 @@ export function create(options: CreateOptions): MapData {
         }
     }
 
-    const empires = []
-    const colors = shuffle(nameColors)()
-    for (let i = 0; i < options.empires; i++) {
-        const hex = randomPick(walkable)
-        if (hex && hex.empire === undefined) {
-            const empire = {
-                name: 'Empire ' + i,
-                capital: hex.x + ',' + hex.y,
-                color: colors[i],
-                expanding: false,
-                economy: 0,
-                stability: 0,
-                warTargets: [],
-                peaceDeals: [],
-                borderEmpires: [],
-                borderCount: 0,
-                age: 0,
-                regions: [],
-                wars: [],
-            }
-            hex.empire = empire
-            empires.push(empire)
-        }
-    }
+    const empires = placeEmpires(options.empires, walkable)
 
     return { cells: cells, empires, width, height }
 }
@@ -125,30 +130,7 @@ export function create2(options: CreateOptions): MapData {
         }
     })
 
-    const empires = []
-    const colors = shuffle(nameColors)()
-    for (let i = 0; i < options.empires; i++) {
-        const hex = randomPick(walkable)
-        if (hex && hex.empire === undefined) {
-            const empire = {
-                name: 'Empire ' + i,
-                capital: hex.x + ',' + hex.y,
-                color: colors[i],
-                expanding: false,
-                economy: 0,
-                stability: 0,
-                warTargets: [],
-                peaceDeals: [],
-                borderEmpires: [],
-                borderCount: 0,
-                age: 0,
-                regions: [],
-                wars: [],
-            }
-            hex.empire = empire
-            empires.push(empire)
-        }
-    }
+    const empires = placeEmpires(options.empires, walkable)
 
     return {
         cells: cells,

@@ -9,24 +9,13 @@ const caches: Record<string, GraphicsContext> = {}
 
 function drawHexagon(size: number, color: ColorSource): GraphicsContext {
     const radius = size
+    const hr = radius / 2
     const height = Math.sqrt(3) * radius
+    const hh = height / 2
     const g = new GraphicsContext()
-        .poly([
-            -radius,
-            0,
-            -radius / 2,
-            height / 2,
-            radius / 2,
-            height / 2,
-            radius,
-            0,
-            radius / 2,
-            -height / 2,
-            -radius / 2,
-            -height / 2,
-        ])
-        .fill(color)
-        .stroke(0x000000)
+    g.rotate(Math.PI / 6)
+    g.poly([-radius, 0, -hr, hh, hr, hh, radius, 0, hr, -hh, -hr, -hh])
+    g.fill(color).stroke(0x000000)
     return g
 }
 
@@ -38,7 +27,6 @@ export class Hexagon extends Container {
             caches[k] = drawHexagon(options.size, options.color)
         }
         const g = new Graphics(caches[k])
-        // g.rotation = Math.PI / 6
         this.addChild(g)
     }
 }

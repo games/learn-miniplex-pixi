@@ -4,8 +4,8 @@ import * as engine from './systems/engine'
 import './style.css'
 import { CityStatsPanel } from './views/CityStatsPanel'
 import * as MapData from './game/map'
-import { Map } from './views/Map'
 import { Entity } from './entity'
+import { HexMap } from './views/HexMap'
 
 const loading = (world: World<Entity>) => async () => {
     const progress = new Text({
@@ -44,13 +44,13 @@ const game = (world: World<Entity>) => {
         const mapData = MapData.create({
             seed: 2,
             width: 20,
-            height: 40,
+            height: 20,
             continentRoughness: 0.4,
             displacement: 20000,
             waterLevel: 0.4,
             empires: 16,
         })
-        const mapView = new Map({ data: mapData, size: 20 })
+        const mapView = new HexMap({ data: mapData, size: 20 })
         mapView.position.set(100, 100)
         const mapEntity = world.add({ view: mapView, parent: map })
         for (const empire of mapData.empires) {

@@ -17,9 +17,13 @@ export class Map extends Container {
             const cell = data.cells[i]
             const row = cell.y
             const hexagon = new Hexagon({ size, color: cell.color })
+            // hexagon.position.set(
+            //     Math.floor((cell.x * width + (row % 2) * size) * 1.5),
+            //     Math.floor(cell.y * size * 0.866)
+            // )
             hexagon.position.set(
-                Math.floor((cell.x * width + (row % 2) * size) * 1.5),
-                Math.floor(cell.y * size * 0.866)
+                cell.x,
+                cell.y
             )
             this.addChild(hexagon)
 
