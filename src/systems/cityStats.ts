@@ -1,5 +1,5 @@
 import { World } from 'miniplex'
-import { Entity } from './engine'
+import { Entity } from '../entity'
 import { CityStatsPanel } from '../views/CityStatsPanel'
 
 export function cityStats(world: World<Entity>) {

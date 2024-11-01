@@ -1,47 +1,10 @@
 import { Bucket, World } from 'miniplex'
-import { Application, Container, Ticker } from 'pixi.js'
+import { Application, Ticker } from 'pixi.js'
 import { renderingSystem } from './rendering'
-import { stateManager, type StateManager } from './state'
-import { City } from '../components'
+import { stateManager } from './state'
 import { cityStats } from './cityStats'
-
-type EntityTags = 'city' | 'cityStatsPanel'
-
-export type Entity = {
-    view?: Container
-    parent?: Entity
-    engine?: {
-        application: Application
-        state: StateManager
-    }
-    tag?: EntityTags
-
-    city?: City
-
-    cityStats?: {
-        city: City
-        position: {
-            x: number
-            y: number
-        }
-    }
-}
-// } & Partial<
-//   | {
-//       tag: "city";
-//       city: City;
-//     }
-//   | {
-//       tag: "cityStatsPanel";
-//       cityStats: {
-//         city: City;
-//         position: {
-//           x: number;
-//           y: number;
-//         };
-//       };
-//     }
-// >;
+import { Entity } from '../entity'
+import { economy } from './economy'
 
 export type System = (ticker: Ticker) => void
 
@@ -56,7 +19,7 @@ export async function start(
     const systems = new Bucket<System>()
     systems.add(renderingSystem(world, application))
     systems.add(cityStats(world))
-    // systems.add(rotatingSystem(world));
+    systems.add(economy(world))
 
     const engine = {
         application,

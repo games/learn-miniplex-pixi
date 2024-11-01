@@ -1,16 +1,19 @@
-export type Hex = {
+type ColorSource = number | string | number[]
+
+export type Cell = {
     x: number
     y: number
     empire?: Empire
-    color: number
+    color: ColorSource
     savedColor: number
     isClustered: boolean
+    isBlocked: boolean
 }
 
 export type Empire = {
     name: string
     capital: string
-    color: string
+    color: ColorSource
     expanding: boolean
     economy: number
     stability: number
@@ -19,31 +22,22 @@ export type Empire = {
     borderEmpires: string[]
     borderCount: number
     age: number
+
+    regions: Cell[]
+    wars: WarDeclaration[]
+}
+
+export type WarDeclaration = {
+    empireA: Empire
+    empireB: Empire
+
+    isRebellion: boolean
+    isLiberation: boolean
 }
 
 export type MapData = {
-    hexes: Hex[]
+    hexes: Cell[]
     empires: Empire[]
     width: number
     height: number
 }
-
-// export class Map {
-//     public readonly hexes: Hex[]
-
-//     constructor(
-//         public readonly width: number,
-//         public readonly height: number
-//     ) {
-//         this.hexes = []
-//     }
-
-//     add(hex: Hex) {
-//         const index = hex.x + hex.y * this.width
-//         this.hexes[index] = hex
-//     }
-
-//     randomTile(): Hex | undefined {
-//         return this.hexes[Math.floor(Math.random() * this.hexes.length)]
-//     }
-// }

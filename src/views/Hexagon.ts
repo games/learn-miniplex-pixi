@@ -1,13 +1,13 @@
-import { Container, Graphics, GraphicsContext } from 'pixi.js'
+import { ColorSource, Container, Graphics, GraphicsContext } from 'pixi.js'
 
 type HexOptions = {
     size: number
-    color: number
+    color: ColorSource
 }
 
-const caches: Record<number, GraphicsContext> = {}
+const caches: Record<string, GraphicsContext> = {}
 
-function drawHexagon(size: number, color: number): GraphicsContext {
+function drawHexagon(size: number, color: ColorSource): GraphicsContext {
     const radius = size
     const height = Math.sqrt(3) * radius
     const g = new GraphicsContext()
@@ -33,11 +33,11 @@ function drawHexagon(size: number, color: number): GraphicsContext {
 export class Hexagon extends Container {
     constructor(options: HexOptions) {
         super()
-
-        if (!caches[options.color]) {
-            caches[options.color] = drawHexagon(options.size, options.color)
+        const k = options.color.toString()
+        if (!caches[k]) {
+            caches[k] = drawHexagon(options.size, options.color)
         }
-        const g = new Graphics(caches[options.color])
+        const g = new Graphics(caches[k])
         // g.rotation = Math.PI / 6
         this.addChild(g)
     }

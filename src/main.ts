@@ -5,8 +5,9 @@ import './style.css'
 import { CityStatsPanel } from './views/CityStatsPanel'
 import * as MapData from './game/map'
 import { Map } from './views/Map'
+import { Entity } from './entity'
 
-const loading = (world: World<engine.Entity>) => async () => {
+const loading = (world: World<Entity>) => async () => {
     const progress = new Text({
         text: 'Loading...',
         style: { fill: 0xffffff },
@@ -28,7 +29,7 @@ const loading = (world: World<engine.Entity>) => async () => {
     }
 }
 
-const game = (world: World<engine.Entity>) => {
+const game = (world: World<Entity>) => {
     return async () => {
         const stage = world.add({ view: new Container() })
         const map = world.add({ view: new Container(), parent: stage })
@@ -51,6 +52,9 @@ const game = (world: World<engine.Entity>) => {
         })
         const mapView = new Map(mapData)
         const mapEntity = world.add({ view: mapView, parent: map })
+        for (const empire of mapData.empires) {
+            const empireEntity = world.add({ empire, parent: mapEntity })
+        }
 
         // for (let i = 0; i < 3; i++) {
         //     const sprite = Sprite.from('bunny')

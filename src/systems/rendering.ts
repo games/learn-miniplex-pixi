@@ -1,5 +1,5 @@
 import { World } from 'miniplex'
-import { Entity } from './engine'
+import { Entity } from '../entity'
 import { Application } from 'pixi.js'
 
 export function renderingSystem(

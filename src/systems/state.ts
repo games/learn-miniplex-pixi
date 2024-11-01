@@ -1,8 +1,8 @@
-type LazyAsync<T> = () => Promise<T>
+import { Task } from 'fp-ts/lib/Task'
 
-type Disposable = LazyAsync<void>
+type Disposable = Task<void>
 
-export type State = LazyAsync<Disposable | void>
+export type State = Task<Disposable | void>
 
 export type StateManager = {
     enter(state: State): Promise<void>
