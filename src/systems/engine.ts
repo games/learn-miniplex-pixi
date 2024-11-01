@@ -5,6 +5,8 @@ import { stateManager } from './state'
 import { cityStats } from './cityStats'
 import { Entity } from '../entity'
 import { economy } from './economy'
+import { expanding } from './expanding'
+import { war } from './war'
 
 export type System = (ticker: Ticker) => void
 
@@ -20,6 +22,8 @@ export async function start(
     systems.add(renderingSystem(world, application))
     systems.add(cityStats(world))
     systems.add(economy(world))
+    systems.add(expanding(world))
+    systems.add(war(world))
 
     const engine = {
         application,
@@ -30,6 +34,7 @@ export async function start(
     await init(world, systems)
 
     application.ticker.add((ticker) => {
+        // TODO: consider to run in parallel?
         for (const system of systems) {
             system(ticker)
         }

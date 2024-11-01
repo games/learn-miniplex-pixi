@@ -11,7 +11,7 @@ function randomPick(hexes: Cell[]): Cell | undefined {
 }
 
 export function hexAt(map: MapData, x: number, y: number) {
-    return findFirst<Cell>((hex) => hex.x === x && hex.y === y)(map.hexes)
+    return findFirst<Cell>((hex) => hex.x === x && hex.y === y)(map.cells)
 }
 
 type CreateOptions = {
@@ -30,29 +30,34 @@ export function create(options: CreateOptions): MapData {
     const prng = Alea(options.seed ?? Math.random())
     const noise = createNoise2D(prng)
 
-    const hexes: Cell[] = []
+    const cells: Cell[] = []
+    const walkable: Cell[] = []
     for (let y = 0; y < height; y++) {
         for (let x = 0; x < width; x++) {
             const nx = x * 0.225 * continentRoughness + displacement
             const ny = y * 0.225 * continentRoughness + displacement
             const n = noise(nx, ny)
-            if (n > (waterLevel - 0.5) * 2) {
-                hexes.push({
-                    x,
-                    y,
-                    color: 0xffffff,
-                    savedColor: 0,
-                    isClustered: false,
-                    isBlocked: false,
-                })
+            const cell = {
+                x,
+                y,
+                color: 0x000000,
+                savedColor: 0,
+                isClustered: false,
+                isBlocked: true,
             }
+            if (n > (waterLevel - 0.5) * 2) {
+                cell.color = 0xffffff
+                cell.isBlocked = false
+                walkable.push(cell)
+            }
+            cells.push(cell)
         }
     }
 
     const empires = []
     const colors = shuffle(nameColors)()
     for (let i = 0; i < options.empires; i++) {
-        const hex = randomPick(hexes)
+        const hex = randomPick(walkable)
         if (hex && hex.empire === undefined) {
             const empire = {
                 name: 'Empire ' + i,
@@ -74,7 +79,7 @@ export function create(options: CreateOptions): MapData {
         }
     }
 
-    return { hexes, empires, width, height }
+    return { cells: cells, empires, width, height }
 }
 
 export function create2(options: CreateOptions): MapData {
@@ -146,7 +151,7 @@ export function create2(options: CreateOptions): MapData {
     }
 
     return {
-        hexes: cells,
+        cells: cells,
         empires,
         width: options.width,
         height: options.height,

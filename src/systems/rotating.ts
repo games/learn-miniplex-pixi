@@ -1,5 +1,5 @@
 import { World } from 'miniplex'
-import { Entity } from './engine'
+import { Entity } from '../entity'
 import { Ticker } from 'pixi.js'
 
 export function rotatingSystem(world: World<Entity>) {

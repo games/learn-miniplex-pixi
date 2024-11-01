@@ -5,7 +5,6 @@ import { Entity } from '../entity'
 
 export function economy(world: World<Entity>) {
     const entities = world.with('empire')
-
     let lastUpdate = 0
 
     return (ticker: Ticker) => {

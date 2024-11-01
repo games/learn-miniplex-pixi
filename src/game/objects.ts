@@ -36,7 +36,7 @@ export type WarDeclaration = {
 }
 
 export type MapData = {
-    hexes: Cell[]
+    cells: Cell[]
     empires: Empire[]
     width: number
     height: number
