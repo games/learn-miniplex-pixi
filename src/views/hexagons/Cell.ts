@@ -1,10 +1,10 @@
 import { ColorSource, Container, Graphics, GraphicsContext } from 'pixi.js'
-import { Cell } from '../../game/objects'
+import { Region } from '../../game/objects'
 import { Empire } from '../Empire'
 
 type HexOptions = {
     size: number
-    cell: Cell
+    region: Region
 }
 
 const caches: Record<string, GraphicsContext> = {}
@@ -21,7 +21,7 @@ function drawHexagon(size: number, color: ColorSource): GraphicsContext {
     return g
 }
 
-export class Region extends Container {
+export class Cell extends Container {
     constructor(private readonly options: HexOptions) {
         super()
         this.render()
@@ -30,27 +30,30 @@ export class Region extends Container {
     render() {
         this.removeChildren()
 
-        const k = this.options.cell.color.toString()
+        const k = this.options.region.color.toString()
         if (!caches[k]) {
-            caches[k] = drawHexagon(this.options.size, this.options.cell.color)
+            caches[k] = drawHexagon(
+                this.options.size,
+                this.options.region.color
+            )
         }
         const g = new Graphics(caches[k])
         this.addChild(g)
 
-        if (this.options.cell.isAtWar) {
+        if (this.options.region.isAtWar) {
             g.tint = 0xff0000
         }
 
-        if (this.options.cell.empire) {
+        if (this.options.region.empire) {
             const empire = new Empire({
-                color: this.options.cell.empire.color,
+                color: this.options.region.empire.color,
                 size: this.options.size / 2,
             })
             this.addChild(empire)
         }
     }
 
-    get cell() {
-        return this.options.cell
+    get region() {
+        return this.options.region
     }
 }

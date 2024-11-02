@@ -1,5 +1,5 @@
 import { Application, Container, type PointData } from 'pixi.js'
-import { Cell, Empire, MapData } from './game/objects'
+import { Region, Empire, MapData } from './game/objects'
 import type { StateManager } from './systems/state'
 
 export type EntityTags = 'city' | 'empireStats' | 'map'
@@ -10,7 +10,7 @@ export type RenderableEntity = {
 
 export type EmpireStatsPanelEntity = {
     empireStats: {
-        region: Cell
+        region: Region
         position: PointData
     }
 }
@@ -19,8 +19,8 @@ export type EmpireEntity = {
     empire: Empire
 }
 
-export type MapCellEntity = {
-    mapCell: Cell
+export type RegionEntity = {
+    region: Region
 }
 
 export type MapEntity = {
@@ -47,4 +47,4 @@ export type Entity = {
     Partial<EmpireStatsPanelEntity> &
     Partial<EmpireEntity> &
     Partial<MapEntity> &
-    Partial<MapCellEntity>
+    Partial<RegionEntity>

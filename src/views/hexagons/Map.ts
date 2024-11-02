@@ -1,6 +1,6 @@
 import { Container } from 'pixi.js'
 import { MapData } from '../../game/objects'
-import { Region } from './Region'
+import { Cell } from './Cell'
 import {
     defineHex,
     Direction,
@@ -20,10 +20,10 @@ type MapOptions = {
 }
 
 export class Map extends Container {
-    private readonly regions: Record<string, Region> = {}
+    private readonly cells: Record<string, Cell> = {}
     private readonly grid: Grid<Hex>
 
-    public readonly regionOvered: Signal<(x: Region) => void> = new Signal()
+    public readonly regionOvered: Signal<(x: Cell) => void> = new Signal()
     public readonly regionOuted: Signal<() => void> = new Signal()
 
     constructor({ data, size }: MapOptions) {
@@ -35,12 +35,12 @@ export class Map extends Container {
         )
         grid.forEach((hex) => {
             const index = hex.row * data.width + hex.col
-            const cell = data.cells[index]
+            const region = data.regions[index]
             const { x, y } = hexToPoint(hex)
-            const region = new Region({ size, cell })
-            region.position.set(x, y)
-            this.addChild(region)
-            this.regions[regionKey(hex)] = region
+            const cell = new Cell({ size, region })
+            cell.position.set(x, y)
+            this.addChild(cell)
+            this.cells[cellKey(hex)] = cell
         })
         this.grid = grid
 
@@ -52,7 +52,7 @@ export class Map extends Container {
         this.onmousemove = (e) => {
             const position = this.toLocal(e.global)
             const hex = grid.pointToHex(position)
-            const region = this.regions[`${hex.col},${hex.row}`]
+            const region = this.cells[`${hex.col},${hex.row}`]
             if (region) {
                 this.children.forEach((region) => {
                     region.alpha = 1
@@ -67,16 +67,16 @@ export class Map extends Container {
         this.onpointerup = (e) => {
             const position = this.toLocal(e.global)
             const hex = grid.pointToHex(position)
-            const region = this.regions[regionKey(hex)]
-            if (region) {
+            const cells = this.cells[cellKey(hex)]
+            if (cells) {
                 const hexes = neighbors<Hex>(grid, {
                     col: hex.col,
                     row: hex.row,
                 })
                 for (const neighbor of hexes) {
-                    const region = this.regions[regionKey(neighbor)]
-                    if (region) {
-                        region.alpha = 0.5
+                    const cell = this.cells[cellKey(neighbor)]
+                    if (cell) {
+                        cell.alpha = 0.5
                     }
                 }
             }
@@ -86,18 +86,16 @@ export class Map extends Container {
     neighbors(col: number, row: number) {
         const hexes = neighbors(this.grid, { col, row })
         return hexes
-            .map((hex) => this.regions[regionKey(hex)])
+            .map((hex) => this.cells[cellKey(hex)])
             .filter((x) => x !== undefined)
     }
 
     refresh() {
-        Object.values(this.regions).forEach((region) => {
-            region.render()
-        })
+        Object.values(this.cells).forEach((cell) => cell.render())
     }
 }
 
-function regionKey(coordinate: OffsetCoordinates) {
+function cellKey(coordinate: OffsetCoordinates) {
     return `${coordinate.col},${coordinate.row}`
 }
 

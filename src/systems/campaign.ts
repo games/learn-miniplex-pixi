@@ -2,12 +2,12 @@ import { World } from 'miniplex'
 import { Entity } from '../entity'
 import { Ticker } from 'pixi.js'
 import { Map } from '../views/hexagons/Map'
-import { Cell, Empire } from '../game/objects'
+import { Region, Empire } from '../game/objects'
 import { randomRange } from 'fp-ts/lib/Random'
 
 export function campaign(world: World<Entity>) {
     const maps = world.with('mapData')
-    const empires = world.with('empire', 'mapCell')
+    const empires = world.with('empire', 'region')
 
     let lastUpdate = 0
     return (ticker: Ticker) => {
@@ -32,7 +32,7 @@ export function campaign(world: World<Entity>) {
                 continue
             }
 
-            const attackerAllies = allies(mapView, empire, entity.mapCell)
+            const attackerAllies = allies(mapView, empire, entity.region)
 
             const cost = 10000
             for (let i = empire.wars.length - 1; i >= 0; i--) {
@@ -66,8 +66,8 @@ export function campaign(world: World<Entity>) {
     }
 }
 
-function allies(mapView: Map, empire: Empire, cell: Cell) {
+function allies(mapView: Map, empire: Empire, cell: Region) {
     return mapView
         .neighbors(cell.x, cell.y)
-        .filter((region) => region.cell.empire === empire).length
+        .filter((region) => region.region.empire === empire).length
 }

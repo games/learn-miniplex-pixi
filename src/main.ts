@@ -16,14 +16,14 @@ const loading = (world: World<Entity>) => async () => {
 
     const entity = world.add({ view: progress })
 
-    Assets.add({
-        alias: 'bunny',
-        src: 'https://pixijs.com/assets/bunny.png',
-    })
+    // Assets.add({
+    //     alias: 'bunny',
+    //     src: 'https://pixijs.com/assets/bunny.png',
+    // })
 
-    await Assets.load('bunny', (x) => {
-        progress.text = `Loading... ${(x * 100).toFixed(1)}%`
-    })
+    // await Assets.load('bunny', (x) => {
+    //     progress.text = `Loading... ${(x * 100).toFixed(1)}%`
+    // })
 
     return async () => {
         world.remove(entity)
@@ -61,7 +61,7 @@ const game = (world: World<Entity>) => {
             // FIXME: this is a hack to update the empireStats component
             world.removeComponent(empireStats, 'empireStats')
             world.addComponent(empireStats, 'empireStats', {
-                region: cell.cell,
+                region: cell.region,
                 position: {
                     x: cell.position.x + mapView.x + 10,
                     y: cell.position.y + mapView.y + 10,
@@ -76,16 +76,16 @@ const game = (world: World<Entity>) => {
             parent: map,
             mapData,
         })
-        for (const cell of mapData.cells) {
-            if (cell.empire) {
+        for (const region of mapData.regions) {
+            if (region.empire) {
                 world.add({
-                    empire: cell.empire,
-                    mapCell: cell,
+                    empire: region.empire,
+                    region: region,
                     parent: mapEntity,
                 })
             } else {
                 world.add({
-                    mapCell: cell,
+                    region: region,
                     parent: mapEntity,
                 })
             }

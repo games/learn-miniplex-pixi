@@ -5,8 +5,8 @@ import { Map } from '../views/hexagons/Map'
 
 export function expanding(world: World<Entity>) {
     const maps = world.with('mapData')
-    const empires = world.with('empire', 'mapCell')
-    const cells = world.with('mapCell')
+    const empires = world.with('empire', 'region')
+    const cells = world.with('region')
 
     let lastUpdate = 0
 
@@ -23,20 +23,20 @@ export function expanding(world: World<Entity>) {
         const mapView = map.view as Map
         const occupiedCells = []
         for (const entity of empires) {
-            const { empire, mapCell } = entity
+            const { empire, region: mapCell } = entity
             const neighbors = mapView.neighbors(mapCell.x, mapCell.y)
             for (const neighbor of neighbors) {
-                if (!neighbor.cell.empire && !neighbor.cell.isBlocked) {
-                    neighbor.cell.empire = empire
-                    empire.regions.push(neighbor.cell)
-                    occupiedCells.push(neighbor.cell)
+                if (!neighbor.region.empire && !neighbor.region.isBlocked) {
+                    neighbor.region.empire = empire
+                    empire.regions.push(neighbor.region)
+                    occupiedCells.push(neighbor.region)
                 } else if (
-                    neighbor.cell.empire &&
-                    neighbor.cell.empire !== empire
+                    neighbor.region.empire &&
+                    neighbor.region.empire !== empire
                 ) {
-                    empire.borderEmpires.add(neighbor.cell.empire)
+                    empire.borderEmpires.add(neighbor.region.empire)
                     mapCell.isBattlefront = true
-                    neighbor.cell.isBattlefront = true
+                    neighbor.region.isBattlefront = true
                 }
             }
         }
@@ -47,7 +47,7 @@ export function expanding(world: World<Entity>) {
             }
             const occupied = cells.where(
                 (element) =>
-                    element.mapCell.x === cell.x && element.mapCell.y === cell.y
+                    element.region.x === cell.x && element.region.y === cell.y
             )
             for (const entity of occupied) {
                 world.addComponent(entity, 'empire', cell.empire)

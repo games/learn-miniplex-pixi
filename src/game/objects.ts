@@ -1,6 +1,6 @@
 type ColorSource = number | string | number[]
 
-export type Cell = {
+export type Region = {
     x: number
     y: number
     empire?: Empire
@@ -27,19 +27,19 @@ export type Empire = {
     borderEmpires: Set<Empire>
     age: number
 
-    regions: Cell[]
+    regions: Region[]
     wars: WarDeclaration[]
 }
 
 export type WarDeclaration = {
     attacker: Empire
     defender: Empire
-    battlefield: Cell
+    battlefield: Region
     startedAt: number
 }
 
 export type MapData = {
-    cells: Cell[]
+    regions: Region[]
     empires: Empire[]
     width: number
     height: number

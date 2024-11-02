@@ -5,7 +5,7 @@ import { Map } from '../views/hexagons/Map'
 
 export function conquer(world: World<Entity>) {
     const maps = world.with('mapData')
-    const empires = world.with('empire', 'mapCell')
+    const empires = world.with('empire', 'region')
 
     let lastUpdate = 0
     return (ticker: Ticker) => {
@@ -24,7 +24,7 @@ export function conquer(world: World<Entity>) {
         // if the empire economy is ba (< 1000), it will not attack other empires
         // if the empires has peace deals with other empires, it will not attack other empires
         // if the empire has no border empires, it will not attack other empires
-        for (const entity of empires.where((x) => x.mapCell.isBattlefront)) {
+        for (const entity of empires.where((x) => x.region.isBattlefront)) {
             const { empire } = entity
 
             if (empire.economy < 1000) {
@@ -35,14 +35,14 @@ export function conquer(world: World<Entity>) {
             }
 
             const neighbors = mapView.neighbors(
-                entity.mapCell.x,
-                entity.mapCell.y
+                entity.region.x,
+                entity.region.y
             )
             const target = neighbors
-                .map((neighbor) => neighbor.cell)
-                .find((cell) => cell.empire !== empire && cell.empire)
+                .map((neighbor) => neighbor.region)
+                .find((region) => region.empire !== empire && region.empire)
             if (!target) {
-                entity.mapCell.isBattlefront = false
+                entity.region.isBattlefront = false
                 continue
             }
 
@@ -52,7 +52,7 @@ export function conquer(world: World<Entity>) {
                 battlefield: target,
                 startedAt: lastUpdate,
             }
-            entity.mapCell.isAtWar = true
+            entity.region.isAtWar = true
             empire.wars.push(war)
 
             target.isAtWar = true

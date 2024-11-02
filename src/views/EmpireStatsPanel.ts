@@ -1,6 +1,6 @@
 import { Graphics, Text } from 'pixi.js'
 import { Layout } from '@pixi/layout'
-import { Cell } from '../game/objects'
+import { Region } from '../game/objects'
 
 function text() {
     return new Text({
@@ -41,7 +41,7 @@ export class EmpireStatsPanel extends Layout {
         this.addContent(this.economy)
     }
 
-    update(region: Cell) {
+    update(region: Region) {
         const { empire } = region
         if (!empire) {
             this.visible = false
