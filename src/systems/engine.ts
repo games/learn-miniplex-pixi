@@ -1,5 +1,5 @@
 import { Bucket, World } from 'miniplex'
-import { Application, Ticker } from 'pixi.js'
+import { Application, ApplicationOptions, Ticker } from 'pixi.js'
 import { renderingSystem } from './rendering'
 import { stateManager } from './state'
 import { empireStats } from './empireStats'
@@ -12,15 +12,14 @@ import { campaign } from './campaign'
 
 export type System = (ticker: Ticker) => void
 
+type EngineOptions = {} & Partial<ApplicationOptions>
+
 export async function start(
+    options: EngineOptions,
     init: (world: World<Entity>, systems: Bucket<System>) => Promise<void>
 ) {
     const application = new Application()
-    await application.init({
-        background: '#1099bb',
-        antialias: true,
-        resizeTo: window,
-    })
+    await application.init(options)
     document.body.appendChild(application.canvas)
 
     const world = new World<Entity>()

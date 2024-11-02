@@ -8,6 +8,7 @@ import { Entity } from './entity'
 import { Map } from './views/hexagons/Map'
 import { GameTime } from './views/GameTime'
 import { BiomeColorsTest } from './views/BiomeColorsTest'
+import { Viewport } from 'pixi-viewport'
 
 const loading = (world: World<Entity>) => async () => {
     const progress = new Text({
@@ -41,11 +42,16 @@ const test = (world: World<Entity>, application: Application) => {
     }
 }
 
-const game = (world: World<Entity>) => {
+const game = (world: World<Entity>, application: Application) => {
     return async () => {
-        const stage = world.add({ view: new Container() })
+        const viewport = new Viewport({
+            passiveWheel: false,
+            events: application.renderer.events,
+        })
+        viewport.drag().pinch().wheel().decelerate()
+        const stage = world.add({ view: viewport })
         const map = world.add({ view: new Container(), parent: stage })
-        const hud = world.add({ view: new Container(), parent: stage })
+        const hud = world.add({ view: new Container() })
 
         const empireStatsView = new EmpireStatsPanel()
         empireStatsView.visible = false
@@ -56,7 +62,11 @@ const game = (world: World<Entity>) => {
 
         const gameTime = new GameTime()
         gameTime.position.set(20, 10)
-        world.add({ view: gameTime, time: { year: 218, month: 0, day: 0 } })
+        world.add({
+            view: gameTime,
+            parent: hud,
+            time: { year: 218, month: 0, day: 0 },
+        })
 
         const mapData = MapData.create2({
             // seeds: {
@@ -109,10 +119,18 @@ const game = (world: World<Entity>) => {
     }
 }
 
-engine.start(async (world, _systems) => {
+const options = {
+    width: 800,
+    height: 600,
+    background: '#1099bb',
+    antialias: true,
+    resizeTo: window,
+}
+
+engine.start(options, async (world, _systems) => {
     const [{ engine }] = world.with('engine')
 
     await engine.state.enter(loading(world))
-    await engine.state.enter(game(world))
+    await engine.state.enter(game(world, engine.application))
     // await engine.state.enter(test(world, engine.application))
 })
