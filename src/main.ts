@@ -37,6 +37,7 @@ const game = (world: World<Entity>) => {
         const hud = world.add({ view: new Container(), parent: stage })
 
         const empireStatsView = new EmpireStatsPanel()
+        empireStatsView.visible = false
         const empireStats = world.add({
             view: empireStatsView,
             parent: hud,
