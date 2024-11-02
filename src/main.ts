@@ -90,28 +90,6 @@ const game = (world: World<Entity>) => {
                 })
             }
         }
-
-        // for (let i = 0; i < 3; i++) {
-        //     const sprite = Sprite.from('bunny')
-        //     sprite.anchor.set(0.5)
-        //     sprite.eventMode = 'static'
-        //     sprite.position.set(Math.random() * 700, Math.random() * 900)
-
-        //     const entity = prefabs.city.build('City ' + i)
-        //     entity.view = sprite
-        //     entity.parent = map
-
-        //     sprite.onmouseover = () => {
-        //         world.addComponent(cityStats, 'cityStats', {
-        //             city: entity.city!,
-        //             position: { x: sprite.x, y: sprite.y },
-        //         })
-        //     }
-        //     sprite.onmouseout = () =>
-        //         world.removeComponent(cityStats, 'cityStats')
-
-        //     world.add(entity)
-        // }
     }
 }
 
