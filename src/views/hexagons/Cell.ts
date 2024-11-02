@@ -9,6 +9,16 @@ type HexOptions = {
 
 const caches: Record<string, GraphicsContext> = {}
 
+function colorOf(region: Region) {
+    if (region.empire) {
+        return region.empire.color
+    } else if (region.isBlocked) {
+        return '#000000'
+    } else {
+        return '#ffffff'
+    }
+}
+
 function drawHexagon(size: number, color: ColorSource): GraphicsContext {
     const radius = size
     const hr = radius / 2
@@ -30,12 +40,10 @@ export class Cell extends Container {
     render() {
         this.removeChildren()
 
-        const k = this.options.region.color.toString()
+        const color = colorOf(this.options.region)
+        const k = color.toString()
         if (!caches[k]) {
-            caches[k] = drawHexagon(
-                this.options.size,
-                this.options.region.color
-            )
+            caches[k] = drawHexagon(this.options.size, color)
         }
         const g = new Graphics(caches[k])
         this.addChild(g)
@@ -46,7 +54,7 @@ export class Cell extends Container {
 
         if (this.options.region.empire) {
             const empire = new Empire({
-                color: this.options.region.empire.color,
+                color: color,
                 size: this.options.size / 2,
             })
             this.addChild(empire)

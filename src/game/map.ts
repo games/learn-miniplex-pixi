@@ -32,10 +32,7 @@ function placeEmpires(count: number, cells: Region[]) {
         if (cell && cell.empire === undefined) {
             const empire = {
                 name: 'Empire ' + i,
-                capital: {
-                    x: cell.x,
-                    y: cell.y,
-                },
+                capital: {},
                 color: colors[i],
                 economy: 0,
                 stability: 0,
@@ -67,15 +64,12 @@ export function create(options: CreateOptions): MapData {
             const cell = {
                 x,
                 y,
-                color: 0x000000,
-                savedColor: 0,
                 isClustered: false,
                 isBlocked: true,
                 isBattlefront: false,
                 isAtWar: false,
             }
             if (n > (waterLevel - 0.5) * 2) {
-                cell.color = 0xffffff
                 cell.isBlocked = false
                 walkable.push(cell)
             }
@@ -102,12 +96,9 @@ export function create2(options: CreateOptions): MapData {
     const walkable: Region[] = []
     const creator = (x: number, y: number, contents: number) => {
         const isBlocked = contents === 1
-        const color = isBlocked ? '#000000' : '#ffffff'
         const cell = {
             x,
             y,
-            color,
-            savedColor: 0,
             isClustered: false,
             isBlocked,
             isBattlefront: false,

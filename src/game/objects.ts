@@ -4,8 +4,6 @@ export type Region = {
     x: number
     y: number
     empire?: Empire
-    color: ColorSource
-    savedColor: number
     isClustered: boolean
     isBlocked: boolean
     isBattlefront: boolean
@@ -13,8 +11,7 @@ export type Region = {
 }
 
 type Capital = {
-    x: number
-    y: number
+    
 }
 
 export type Empire = {
