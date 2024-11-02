@@ -110,6 +110,6 @@ engine.start(async (world, _systems) => {
     const [{ engine }] = world.with('engine')
 
     await engine.state.enter(loading(world))
-    // await engine.state.enter(game(world, engine.application))
-    await engine.state.enter(test(world, engine.application))
+    await engine.state.enter(game(world, engine.application))
+    // await engine.state.enter(test(world, engine.application))
 })

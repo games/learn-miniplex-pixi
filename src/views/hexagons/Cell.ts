@@ -23,13 +23,13 @@ function regionColor(region: Region) {
         case 'water':
             return 0x7dcfff
         case 'sand':
-            return 0xf5f5f5
+            return 0xf5dfb0
         case 'grass':
-            return 0xe6e6e6
+            return 0x5ce665
         case 'forest':
-            return 0xe7e7e7
+            return 0x008000
         case 'rock':
-            return 0xe8e8e8
+            return 0x808080
         case 'snow':
             return 0xffffff
         default:
@@ -37,7 +37,11 @@ function regionColor(region: Region) {
     }
 }
 
-function drawHexagon(size: number, color: ColorSource): GraphicsContext {
+function drawHexagon(
+    size: number,
+    color: ColorSource,
+    border: boolean
+): GraphicsContext {
     const radius = size
     const hr = radius / 2
     const height = Math.sqrt(3) * radius
@@ -45,7 +49,10 @@ function drawHexagon(size: number, color: ColorSource): GraphicsContext {
     const g = new GraphicsContext()
     g.rotate(Math.PI / 6)
     g.poly([-radius, 0, -hr, hh, hr, hh, radius, 0, hr, -hh, -hr, -hh])
-    g.fill(color).stroke(0x000000)
+    g.fill(color)
+    if (border) {
+        g.stroke(0x000000)
+    }
     return g
 }
 
@@ -58,27 +65,32 @@ export class Cell extends Container {
     render() {
         this.removeChildren()
 
-        const cx = Math.floor(
-            this.options.region.terrain.moisture *
-                this.options.biomeColors.width
-        )
-        const cy = Math.floor(
-            this.options.region.terrain.elevation *
-                this.options.biomeColors.height
-        )
-        const i = (cx * this.options.biomeColors.width + cy) * 4
-        //RGBA
-        const color = {
-            r: this.options.biomeColors.pixels[i],
-            g: this.options.biomeColors.pixels[i + 1],
-            b: this.options.biomeColors.pixels[i + 2],
-            a: this.options.biomeColors.pixels[i + 3],
-        }
+        // const cx = Math.floor(
+        //     this.options.region.terrain.moisture *
+        //         this.options.biomeColors.width
+        // )
+        // const cy = Math.floor(
+        //     this.options.region.terrain.elevation *
+        //         this.options.biomeColors.height
+        // )
+        // const i = (cx * this.options.biomeColors.width + cy) * 4
+        // //RGBA
+        // const color = {
+        //     r: this.options.biomeColors.pixels[i],
+        //     g: this.options.biomeColors.pixels[i + 1],
+        //     b: this.options.biomeColors.pixels[i + 2],
+        //     a: this.options.biomeColors.pixels[i + 3],
+        // }
+        // const k = `${color.r},${color.g},${color.b},${color.a}`
 
-        //regionColor(this.options.region)
-        const k = `${color.r},${color.g},${color.b},${color.a}`
+        const color = regionColor(this.options.region)
+        const k = color.toString()
         if (!caches[k]) {
-            caches[k] = drawHexagon(this.options.size, color)
+            caches[k] = drawHexagon(
+                this.options.size,
+                color,
+                this.options.region.terrain.biome !== 'water'
+            )
         }
         const g = new Graphics(caches[k])
         this.addChild(g)
