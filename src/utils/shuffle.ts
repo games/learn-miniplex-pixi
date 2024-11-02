@@ -12,3 +12,7 @@ export const shuffle =
 
         return source
     }
+
+export function randomPick<T>(items: T[]): T | undefined {
+    return items[Math.floor(Math.random() * items.length)]
+}

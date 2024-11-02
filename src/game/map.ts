@@ -1,17 +1,22 @@
 import { createNoise2D, NoiseFunction2D } from 'simplex-noise'
-import { Region, Empire, MapData, Biome, Terrain } from './objects'
 import Alea from 'alea'
-import { Map } from 'rot-js'
-import { shuffle } from '../utils/shuffle'
+import { Map, RNG } from 'rot-js'
+import { Region, Empire, MapData, Biome, Terrain } from './objects'
+import { shuffle, randomPick } from '../utils/shuffle'
 import { nameColors } from '../utils/colors'
 
-function randomPick<T>(items: T[]): T | undefined {
-    return items[Math.floor(Math.random() * items.length)]
+const defaultSeeds = {
+    terrain: 0.523804631364627,
+    elevation: 0.4628746005453841,
+    moisture: 3,
 }
 
 type CreateOptions = {
-    seed1?: number
-    seed2?: number
+    seeds?: {
+        terrain: number
+        elevation: number
+        moisture: number
+    }
     width: number
     height: number
     continentRoughness: number
@@ -23,32 +28,36 @@ type CreateOptions = {
 function placeEmpires(count: number, cells: Region[]) {
     const empires: Empire[] = []
     const colors = shuffle(nameColors)()
+    const available = cells.filter(
+        (x) => x.terrain.biome === 'grass' && x.empire === undefined
+    )
+    if (available.length < count) {
+        throw new Error('Not enough space for empires')
+    }
     for (let i = 0; i < count; i++) {
-        const cell = randomPick(cells)
-        if (cell && cell.empire === undefined) {
-            const empire = {
-                name: 'Empire ' + i,
-                capital: {},
-                color: colors[i],
-                economy: 0,
-                stability: 0,
-                borderEmpires: new Set<Empire>(),
-                age: 0,
-                regions: [],
-                wars: [],
-            }
-            cell.empire = empire
-            empires.push(empire)
+        const cell = randomPick(available)!
+        const empire = {
+            name: 'Empire ' + i,
+            capital: {},
+            color: colors[i],
+            economy: 0,
+            stability: 0,
+            borderEmpires: new Set<Empire>(),
+            age: 0,
+            regions: [],
+            wars: [],
         }
+        cell.empire = empire
+        empires.push(empire)
     }
     return empires
 }
 
-const ocean: Terrain = { biome: 'ocean', elevation: 0, moisture: 1 }
+const block: Terrain = { biome: 'block', elevation: 0, moisture: 1 }
 
 function biome(elevation: number, _moisture: number): Biome {
-    if (elevation < 0.1) return 'ocean'
-    if (elevation < 0.3) return 'water'
+    if (elevation < 0.2) return 'ocean'
+    if (elevation < 0.35) return 'water'
     if (elevation < 0.4) return 'sand'
     if (elevation < 0.7) return 'grass'
     if (elevation < 0.8) return 'forest'
@@ -92,8 +101,9 @@ function terrain(
 export function create(options: CreateOptions): MapData {
     const { width, height, continentRoughness, displacement, waterLevel } =
         options
-    const noiseE = createNoise2D(Alea(options.seed1 ?? Math.random()))
-    const noiseM = createNoise2D(Alea(options.seed2 ?? Math.random()))
+    const seeds = options.seeds ?? defaultSeeds
+    const noiseE = createNoise2D(Alea(seeds.terrain))
+    const noiseM = createNoise2D(Alea(seeds.moisture))
 
     const regions: Region[] = []
     const walkable: Region[] = []
@@ -125,6 +135,9 @@ export function create(options: CreateOptions): MapData {
 }
 
 export function create2(options: CreateOptions): MapData {
+    const seeds = options.seeds ?? defaultSeeds
+    RNG.setSeed(seeds.terrain)
+
     const gen =
         // new Map.Digger(options.width, options.height)
         new Map.Cellular(options.width, options.height, {
@@ -135,8 +148,8 @@ export function create2(options: CreateOptions): MapData {
     gen.randomize(0.9)
 
     const { width, height } = options
-    const noiseE = createNoise2D(Alea(options.seed1 ?? Math.random()))
-    const noiseM = createNoise2D(Alea(options.seed2 ?? Math.random()))
+    const noiseE = createNoise2D(Alea(seeds.elevation))
+    const noiseM = createNoise2D(Alea(seeds.moisture))
 
     const regions: Region[] = []
     const walkable: Region[] = []
@@ -146,7 +159,7 @@ export function create2(options: CreateOptions): MapData {
             x,
             y,
             terrain: isBlocked
-                ? ocean
+                ? block
                 : terrain(x, y, width, height, noiseE, noiseM),
             isClustered: false,
             isBlocked,

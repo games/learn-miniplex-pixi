@@ -59,8 +59,11 @@ const game = (world: World<Entity>) => {
         world.add({ view: gameTime, time: { year: 218, month: 0, day: 0 } })
 
         const mapData = MapData.create2({
-            seed1: Math.random(),
-            seed2: Math.random(),
+            // seeds: {
+            //     terrain: Math.random(),
+            //     elevation: Math.random(),
+            //     moisture: 3,
+            // },
             width: 40,
             height: 40,
             continentRoughness: 0.4,

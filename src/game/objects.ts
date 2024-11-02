@@ -1,6 +1,7 @@
 type ColorSource = number | string | number[]
 
 export type Biome =
+    | 'block'
     | 'ocean'
     | 'water'
     | 'sand'

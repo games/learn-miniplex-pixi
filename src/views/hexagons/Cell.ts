@@ -11,8 +11,8 @@ const caches: Record<string, GraphicsContext> = {}
 
 function regionColor(region: Region) {
     switch (region.terrain.biome) {
-        // case 'ocean':
-        //     return 0x0000ff
+        case 'ocean':
+            return 0x0000ff
         case 'water':
             return 0x7dcfff
         case 'sand':
@@ -63,7 +63,7 @@ export class Cell extends Container {
             caches[k] = drawHexagon(
                 this.options.size,
                 color,
-                this.options.region.terrain.biome !== 'water'
+                !['water', 'ocean'].includes(this.options.region.terrain.biome)
             )
         }
         const g = new Graphics(caches[k])
