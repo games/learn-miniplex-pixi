@@ -1,4 +1,4 @@
-import { Assets, Container, Text } from 'pixi.js'
+import { Application, Assets, Container, Text } from 'pixi.js'
 import { World } from 'miniplex'
 import * as engine from './systems/engine'
 import './style.css'
@@ -7,6 +7,7 @@ import * as MapData from './game/map'
 import { Entity } from './entity'
 import { Map } from './views/hexagons/Map'
 import { GameTime } from './views/GameTime'
+import { BiomeColorsTest } from './views/BiomeColorsTest'
 
 const loading = (world: World<Entity>) => async () => {
     const progress = new Text({
@@ -16,21 +17,31 @@ const loading = (world: World<Entity>) => async () => {
 
     const entity = world.add({ view: progress })
 
-    // Assets.add({
-    //     alias: 'bunny',
-    //     src: 'https://pixijs.com/assets/bunny.png',
-    // })
+    Assets.add({
+        alias: 'biome-lookup-smooth',
+        src: '/biome-lookup-smooth.png',
+    })
 
-    // await Assets.load('bunny', (x) => {
-    //     progress.text = `Loading... ${(x * 100).toFixed(1)}%`
-    // })
+    await Assets.load('biome-lookup-smooth', (x) => {
+        progress.text = `Loading... ${(x * 100).toFixed(1)}%`
+    })
 
     return async () => {
         world.remove(entity)
     }
 }
 
-const game = (world: World<Entity>) => {
+const test = (world: World<Entity>, application: Application) => {
+    return async () => {
+        const t = new BiomeColorsTest(application)
+        t.position.set(100, 100)
+        world.add({
+            view: t,
+        })
+    }
+}
+
+const game = (world: World<Entity>, application: Application) => {
     return async () => {
         const stage = world.add({ view: new Container() })
         const map = world.add({ view: new Container(), parent: stage })
@@ -48,7 +59,8 @@ const game = (world: World<Entity>) => {
         world.add({ view: gameTime, time: { year: 218, month: 0, day: 0 } })
 
         const mapData = MapData.create2({
-            seed: 2,
+            seed1: Math.random(),
+            seed2: Math.random(),
             width: 40,
             height: 40,
             continentRoughness: 0.4,
@@ -56,7 +68,7 @@ const game = (world: World<Entity>) => {
             waterLevel: 0.4,
             empires: 10,
         })
-        const mapView = new Map({ data: mapData, size: 15 })
+        const mapView = new Map({ data: mapData, size: 15, application })
         mapView.position.set(20, 50)
         mapView.regionOvered.connect((cell) => {
             // FIXME: this is a hack to update the empireStats component
@@ -98,5 +110,6 @@ engine.start(async (world, _systems) => {
     const [{ engine }] = world.with('engine')
 
     await engine.state.enter(loading(world))
-    await engine.state.enter(game(world))
+    // await engine.state.enter(game(world, engine.application))
+    await engine.state.enter(test(world, engine.application))
 })

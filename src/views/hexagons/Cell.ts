@@ -1,21 +1,39 @@
-import { ColorSource, Container, Graphics, GraphicsContext } from 'pixi.js'
+import {
+    ColorSource,
+    Container,
+    GetPixelsOutput,
+    Graphics,
+    GraphicsContext,
+} from 'pixi.js'
 import { Region } from '../../game/objects'
 import { Empire } from '../Empire'
 
-type HexOptions = {
+type CellOptions = {
     size: number
     region: Region
+    biomeColors: GetPixelsOutput
 }
 
 const caches: Record<string, GraphicsContext> = {}
 
-function colorOf(region: Region) {
-    if (region.empire) {
-        return region.empire.color
-    } else if (region.isBlocked) {
-        return '#000000'
-    } else {
-        return '#ffffff'
+function regionColor(region: Region) {
+    switch (region.terrain.biome) {
+        // case 'ocean':
+        //     return 0x0000ff
+        case 'water':
+            return 0x7dcfff
+        case 'sand':
+            return 0xf5f5f5
+        case 'grass':
+            return 0xe6e6e6
+        case 'forest':
+            return 0xe7e7e7
+        case 'rock':
+            return 0xe8e8e8
+        case 'snow':
+            return 0xffffff
+        default:
+            return 0x000000
     }
 }
 
@@ -32,7 +50,7 @@ function drawHexagon(size: number, color: ColorSource): GraphicsContext {
 }
 
 export class Cell extends Container {
-    constructor(private readonly options: HexOptions) {
+    constructor(private readonly options: CellOptions) {
         super()
         this.render()
     }
@@ -40,8 +58,25 @@ export class Cell extends Container {
     render() {
         this.removeChildren()
 
-        const color = colorOf(this.options.region)
-        const k = color.toString()
+        const cx = Math.floor(
+            this.options.region.terrain.moisture *
+                this.options.biomeColors.width
+        )
+        const cy = Math.floor(
+            this.options.region.terrain.elevation *
+                this.options.biomeColors.height
+        )
+        const i = (cx * this.options.biomeColors.width + cy) * 4
+        //RGBA
+        const color = {
+            r: this.options.biomeColors.pixels[i],
+            g: this.options.biomeColors.pixels[i + 1],
+            b: this.options.biomeColors.pixels[i + 2],
+            a: this.options.biomeColors.pixels[i + 3],
+        }
+
+        //regionColor(this.options.region)
+        const k = `${color.r},${color.g},${color.b},${color.a}`
         if (!caches[k]) {
             caches[k] = drawHexagon(this.options.size, color)
         }
@@ -54,7 +89,7 @@ export class Cell extends Container {
 
         if (this.options.region.empire) {
             const empire = new Empire({
-                color: color,
+                color: this.options.region.empire.color,
                 size: this.options.size / 2,
             })
             this.addChild(empire)

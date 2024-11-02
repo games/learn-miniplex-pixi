@@ -1,4 +1,4 @@
-import { Container } from 'pixi.js'
+import { Application, Container, Texture } from 'pixi.js'
 import { MapData } from '../../game/objects'
 import { Cell } from './Cell'
 import {
@@ -13,10 +13,12 @@ import {
 } from 'honeycomb-grid'
 import { isNumber } from 'fp-ts/lib/number'
 import { Signal } from 'typed-signals'
+import { flipPixels } from '../flipPixels'
 
 type MapOptions = {
     data: MapData
     size: number
+    application: Application
 }
 
 export class Map extends Container {
@@ -26,8 +28,12 @@ export class Map extends Container {
     public readonly regionOvered: Signal<(x: Cell) => void> = new Signal()
     public readonly regionOuted: Signal<() => void> = new Signal()
 
-    constructor({ data, size }: MapOptions) {
+    constructor({ data, size, application }: MapOptions) {
         super()
+
+        const biomeColors = application.renderer.extract.pixels(
+            Texture.from('biome-lookup-smooth')
+        )
 
         const grid = new Grid(
             defineHex({ dimensions: size }),
@@ -37,7 +43,11 @@ export class Map extends Container {
             const index = hex.row * data.width + hex.col
             const region = data.regions[index]
             const { x, y } = hexToPoint(hex)
-            const cell = new Cell({ size, region })
+            const cell = new Cell({
+                size,
+                region,
+                biomeColors: flipPixels(biomeColors),
+            })
             cell.position.set(x, y)
             this.addChild(cell)
             this.cells[cellKey(hex)] = cell

@@ -16,17 +16,21 @@ export async function start(
     init: (world: World<Entity>, systems: Bucket<System>) => Promise<void>
 ) {
     const application = new Application()
-    await application.init({ background: '#1099bb', resizeTo: window })
+    await application.init({
+        background: '#1099bb',
+        antialias: true,
+        resizeTo: window,
+    })
     document.body.appendChild(application.canvas)
 
     const world = new World<Entity>()
     const systems = new Bucket<System>()
     systems.add(time(world))
     systems.add(empireStats(world))
-    systems.add(economy(world))
-    systems.add(expanding(world))
-    systems.add(conquer(world))
-    systems.add(campaign(world))
+    // systems.add(economy(world))
+    // systems.add(expanding(world))
+    // systems.add(conquer(world))
+    // systems.add(campaign(world))
     systems.add(renderingSystem(world, application))
 
     const engine = {

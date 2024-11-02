@@ -1,18 +1,28 @@
 type ColorSource = number | string | number[]
 
+export type Biome =
+    | 'ocean'
+    | 'water'
+    | 'sand'
+    | 'grass'
+    | 'forest'
+    | 'rock'
+    | 'snow'
+
+export type Terrain = { biome: Biome; elevation: number; moisture: number }
+
 export type Region = {
     x: number
     y: number
     empire?: Empire
+    terrain: Terrain
     isClustered: boolean
     isBlocked: boolean
     isBattlefront: boolean
     isAtWar: boolean
 }
 
-type Capital = {
-    
-}
+type Capital = {}
 
 export type Empire = {
     name: string

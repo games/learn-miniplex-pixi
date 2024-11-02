@@ -17,6 +17,10 @@ export function time(world: World<Entity>) {
             return
         }
 
+        if (times.size === 0) {
+            return
+        }
+
         const [entity] = times
         const { time } = entity
 
