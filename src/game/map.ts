@@ -6,8 +6,8 @@ import { Map } from 'rot-js'
 import { shuffle } from '../utils/shuffle'
 import { nameColors } from '../utils/colors'
 
-function randomPick(hexes: Region[]): Region | undefined {
-    return hexes[Math.floor(Math.random() * hexes.length)]
+function randomPick<T>(items: T[]): T | undefined {
+    return items[Math.floor(Math.random() * items.length)]
 }
 
 export function hexAt(map: MapData, x: number, y: number) {
