@@ -1,17 +1,10 @@
-import {
-    ColorSource,
-    Container,
-    GetPixelsOutput,
-    Graphics,
-    GraphicsContext,
-} from 'pixi.js'
+import { ColorSource, Container, Graphics, GraphicsContext } from 'pixi.js'
 import { Region } from '../../game/objects'
 import { Empire } from '../Empire'
 
 type CellOptions = {
     size: number
     region: Region
-    biomeColors: GetPixelsOutput
 }
 
 const caches: Record<string, GraphicsContext> = {}
@@ -64,25 +57,6 @@ export class Cell extends Container {
 
     render() {
         this.removeChildren()
-
-        // const cx = Math.floor(
-        //     this.options.region.terrain.moisture *
-        //         this.options.biomeColors.width
-        // )
-        // const cy = Math.floor(
-        //     this.options.region.terrain.elevation *
-        //         this.options.biomeColors.height
-        // )
-        // const i = (cx * this.options.biomeColors.width + cy) * 4
-        // //RGBA
-        // const color = {
-        //     r: this.options.biomeColors.pixels[i],
-        //     g: this.options.biomeColors.pixels[i + 1],
-        //     b: this.options.biomeColors.pixels[i + 2],
-        //     a: this.options.biomeColors.pixels[i + 3],
-        // }
-        // const k = `${color.r},${color.g},${color.b},${color.a}`
-
         const color = regionColor(this.options.region)
         const k = color.toString()
         if (!caches[k]) {

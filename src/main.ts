@@ -41,7 +41,7 @@ const test = (world: World<Entity>, application: Application) => {
     }
 }
 
-const game = (world: World<Entity>, application: Application) => {
+const game = (world: World<Entity>) => {
     return async () => {
         const stage = world.add({ view: new Container() })
         const map = world.add({ view: new Container(), parent: stage })
@@ -68,7 +68,7 @@ const game = (world: World<Entity>, application: Application) => {
             waterLevel: 0.4,
             empires: 10,
         })
-        const mapView = new Map({ data: mapData, size: 15, application })
+        const mapView = new Map({ data: mapData, size: 15 })
         mapView.position.set(20, 50)
         mapView.regionOvered.connect((cell) => {
             // FIXME: this is a hack to update the empireStats component
@@ -110,6 +110,6 @@ engine.start(async (world, _systems) => {
     const [{ engine }] = world.with('engine')
 
     await engine.state.enter(loading(world))
-    await engine.state.enter(game(world, engine.application))
+    await engine.state.enter(game(world))
     // await engine.state.enter(test(world, engine.application))
 })
