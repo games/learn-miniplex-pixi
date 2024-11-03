@@ -17,7 +17,7 @@ export type Region = {
     y: number
     empire?: Empire
     terrain: Terrain
-    isClustered: boolean
+    isCapital: boolean
     isBlocked: boolean
     isBattlefront: boolean
     isAtWar: boolean

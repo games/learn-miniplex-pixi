@@ -18,12 +18,9 @@ const loading = (world: World<Entity>) => async () => {
 
     const entity = world.add({ view: progress })
 
-    Assets.add({
-        alias: 'biome-lookup-smooth',
-        src: '/biome-lookup-smooth.png',
-    })
-
-    await Assets.load('biome-lookup-smooth', (x) => {
+    const manifest = await fetch('manifest.json').then((x) => x.json())
+    await Assets.init({ manifest })
+    await Assets.loadBundle('game', (x) => {
         progress.text = `Loading... ${(x * 100).toFixed(1)}%`
     })
 
@@ -81,7 +78,7 @@ const game = (world: World<Entity>, application: Application) => {
             waterLevel: 0.4,
             empires: 10,
         })
-        const mapView = new Map({ data: mapData, size: 15 })
+        const mapView = new Map({ data: mapData, size: 16 })
         mapView.position.set(20, 50)
         mapView.regionOvered.connect((cell) => {
             // FIXME: this is a hack to update the empireStats component

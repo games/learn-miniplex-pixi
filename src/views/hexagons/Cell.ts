@@ -33,7 +33,7 @@ function regionColor(region: Region) {
 function drawHexagon(
     size: number,
     color: ColorSource,
-    border: boolean
+    border?: ColorSource
 ): GraphicsContext {
     const radius = size
     const hr = radius / 2
@@ -43,8 +43,8 @@ function drawHexagon(
     g.rotate(Math.PI / 6)
     g.poly([-radius, 0, -hr, hh, hr, hh, radius, 0, hr, -hh, -hr, -hh])
     g.fill(color)
-    if (border) {
-        g.stroke(0x000000)
+    if (border !== undefined) {
+        g.stroke(border)
     }
     return g
 }
@@ -60,10 +60,13 @@ export class Cell extends Container {
         const color = regionColor(this.options.region)
         const k = color.toString()
         if (!caches[k]) {
+            const noBorder = ['water', 'ocean'].includes(
+                this.options.region.terrain.biome
+            )
             caches[k] = drawHexagon(
                 this.options.size,
                 color,
-                !['water', 'ocean'].includes(this.options.region.terrain.biome)
+                noBorder ? undefined : 0x000000
             )
         }
         const g = new Graphics(caches[k])
@@ -72,11 +75,9 @@ export class Cell extends Container {
         if (this.options.region.isAtWar) {
             g.tint = 0xff0000
         }
-
-        if (this.options.region.empire) {
+        if (this.options.region.empire && this.options.region.isCapital) {
             const empire = new Empire({
                 color: this.options.region.empire.color,
-                size: this.options.size / 2,
             })
             this.addChild(empire)
         }

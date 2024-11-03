@@ -1,0 +1,21 @@
+{
+    "bundles": [
+        {
+            "name": "game",
+            "assets": [
+                {
+                    "alias": "biome-lookup-smooth",
+                    "src": "biome-lookup-smooth.png"
+                },
+                {
+                    "alias": "workers",
+                    "src": "MiniWorldSprites/Characters/Workers/RedWorker/FarmerRed.png"
+                },
+                {
+                    "alias": "huts",
+                    "src": "MiniWorldSprites/Buildings/Red/RedHuts.png"
+                }
+            ]
+        }
+    ]
+}

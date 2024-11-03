@@ -35,7 +35,7 @@ function placeEmpires(count: number, cells: Region[]) {
         throw new Error('Not enough space for empires')
     }
     for (let i = 0; i < count; i++) {
-        const cell = randomPick(available)!
+        const region = randomPick(available)!
         const empire = {
             name: 'Empire ' + i,
             capital: {},
@@ -47,7 +47,8 @@ function placeEmpires(count: number, cells: Region[]) {
             regions: [],
             wars: [],
         }
-        cell.empire = empire
+        region.empire = empire
+        region.isCapital = true
         empires.push(empire)
     }
     return empires
@@ -116,8 +117,8 @@ export function create(options: CreateOptions): MapData {
                 x,
                 y,
                 terrain: terrain(x, y, width, height, noiseE, noiseM),
-                isClustered: false,
                 isBlocked: true,
+                isCapital: false,
                 isBattlefront: false,
                 isAtWar: false,
             }
@@ -161,9 +162,9 @@ export function create2(options: CreateOptions): MapData {
             terrain: isBlocked
                 ? block
                 : terrain(x, y, width, height, noiseE, noiseM),
-            isClustered: false,
             isBlocked,
             isBattlefront: false,
+            isCapital: false,
             isAtWar: false,
         }
         regions.push(region)

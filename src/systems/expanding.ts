@@ -23,8 +23,8 @@ export function expanding(world: World<Entity>) {
         const mapView = map.view as Map
         const occupiedCells = []
         for (const entity of empires) {
-            const { empire, region: mapCell } = entity
-            const neighbors = mapView.neighbors(mapCell.x, mapCell.y)
+            const { empire, region } = entity
+            const neighbors = mapView.neighbors(region.x, region.y)
             for (const neighbor of neighbors) {
                 if (!neighbor.region.empire && !neighbor.region.isBlocked) {
                     neighbor.region.empire = empire
@@ -35,22 +35,22 @@ export function expanding(world: World<Entity>) {
                     neighbor.region.empire !== empire
                 ) {
                     empire.borderEmpires.add(neighbor.region.empire)
-                    mapCell.isBattlefront = true
+                    region.isBattlefront = true
                     neighbor.region.isBattlefront = true
                 }
             }
         }
 
-        for (const cell of occupiedCells) {
-            if (!cell.empire) {
+        for (const region of occupiedCells) {
+            if (!region.empire) {
                 return
             }
             const occupied = cells.where(
                 (element) =>
-                    element.region.x === cell.x && element.region.y === cell.y
+                    element.region.x === region.x && element.region.y === region.y
             )
             for (const entity of occupied) {
-                world.addComponent(entity, 'empire', cell.empire)
+                world.addComponent(entity, 'empire', region.empire)
             }
         }
 
