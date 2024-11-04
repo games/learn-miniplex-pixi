@@ -30,6 +30,8 @@ export type Empire = {
     capital: Capital
     color: ColorSource
     economy: number
+    labors: number
+    technology: number
     stability: number
 
     borderEmpires: Set<Empire>

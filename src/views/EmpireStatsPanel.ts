@@ -16,6 +16,8 @@ function text() {
 export class EmpireStatsPanel extends Layout {
     private readonly empireName: Text
     private readonly economy: Text
+    private readonly technology: Text
+    private readonly labors: Text
 
     constructor() {
         super({
@@ -39,6 +41,12 @@ export class EmpireStatsPanel extends Layout {
 
         this.economy = text()
         this.addContent(this.economy)
+
+        this.labors = text()
+        this.addContent(this.labors)
+
+        this.technology = text()
+        this.addContent(this.technology)
     }
 
     update(region: Region) {
@@ -50,6 +58,8 @@ export class EmpireStatsPanel extends Layout {
         this.visible = true
         this.empireName.text = empire?.name ?? 'Anarchy'
         this.economy.text = `Economy: ${empire?.economy ?? 0}`
+        this.labors.text = `Labors: ${empire?.labors ?? 0}`
+        this.technology.text = `Technology: ${empire?.technology ?? 0}`
         this.resize()
     }
 }

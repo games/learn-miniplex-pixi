@@ -40,11 +40,13 @@ function placeEmpires(count: number, cells: Region[]) {
             name: 'Empire ' + i,
             capital: {},
             color: colors[i],
-            economy: 0,
-            stability: 0,
+            economy: 1,
+            technology: 1,
+            labors: 10,
+            stability: 1,
             borderEmpires: new Set<Empire>(),
             age: 0,
-            regions: [],
+            regions: [region],
             wars: [],
         }
         region.empire = empire

@@ -69,5 +69,5 @@ export function campaign(world: World<Entity>) {
 function allies(mapView: Map, empire: Empire, cell: Region) {
     return mapView
         .neighbors(cell.x, cell.y)
-        .filter((region) => region.region.empire === empire).length
+        .filter((cell) => cell.region.empire === empire).length
 }

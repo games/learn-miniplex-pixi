@@ -5,7 +5,7 @@ import { stateManager } from './state'
 import { empireStats } from './empireStats'
 import { Entity } from '../entity'
 import { time } from './time'
-import { economy } from './economy'
+import { economy } from './economy2'
 import { expanding } from './expanding'
 import { conquer } from './conquer'
 import { campaign } from './campaign'
@@ -26,7 +26,7 @@ export async function start(
     const systems = new Bucket<System>()
     systems.add(time(world))
     systems.add(empireStats(world))
-    // systems.add(economy(world))
+    systems.add(economy(world))
     // systems.add(expanding(world))
     // systems.add(conquer(world))
     // systems.add(campaign(world))
