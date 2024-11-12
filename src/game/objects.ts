@@ -1,3 +1,4 @@
+
 export type EmpireColors = 'Cyan' | 'Lime' | 'Purple' | 'Red' | 'Wood'
 
 export type Biome =

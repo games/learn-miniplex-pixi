@@ -24,3 +24,10 @@ https://www.dungeonscrawl.com/
 ### HUD (?)
 
 https://lil-gui.georgealways.com/#
+
+### app
+
+https://github.com/tauri-apps/tauri
+
+https://github.com/neutralinojs/neutralinojs
+
