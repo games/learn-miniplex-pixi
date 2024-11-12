@@ -1,4 +1,4 @@
-type ColorSource = number | string | number[]
+export type EmpireColors = 'Cyan' | 'Lime' | 'Purple' | 'Red' | 'Wood'
 
 export type Biome =
     | 'block'
@@ -28,7 +28,7 @@ type Capital = {}
 export type Empire = {
     name: string
     capital: Capital
-    color: ColorSource
+    color: EmpireColors
     economy: number
     labors: number
     technology: number

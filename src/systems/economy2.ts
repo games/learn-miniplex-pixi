@@ -27,8 +27,8 @@ const alpha = 0.3
 const A = 1
 const s = 0.2
 const delta = 0.1
-const n = 0.02
-const g = 0.02
+const n = 0.0000001
+const g = 0.000000
 
 function cobbDouglas(capital: number, labor: number) {
     return A * capital ** alpha * labor ** (1 - alpha)
@@ -56,10 +56,11 @@ export function economy(world: World<Entity>) {
         if (ticker.lastTime - lastUpdate < 1000) {
             return
         }
+        const delta = ticker.lastTime - lastUpdate
         lastUpdate = ticker.lastTime
         for (const { empire } of entities) {
             const labors =
-                empire.regions.filter((x) => !x.isAtWar).length + empire.labors
+                empire.regions.filter((x) => !x.isAtWar).length //+ empire.labors
             const economy = capitalOverTime(
                 empire.economy,
                 labors,

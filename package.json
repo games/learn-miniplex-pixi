@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "assetpack",
+    "assets": "assetpack",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vitest",
@@ -12,6 +14,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@assetpack/core": "^1.2.1",
     "prettier": "^3.3.3",
     "typescript": "~5.6.2",
     "vite": "^5.4.9",

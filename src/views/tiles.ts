@@ -15,7 +15,7 @@ function build(def: TileDef) {
     })
 }
 
-export const capital = () => build({ x: 4, y: 0, texture: 'huts' })
+export const capital = (texture: string) => build({ x: 4, y: 0, texture })
 
 export const worker = (kind: 0 | 1 | 2 | 3 | 4 | 5) =>
     build({

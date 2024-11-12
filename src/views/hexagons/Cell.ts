@@ -80,6 +80,8 @@ export class Cell extends Container {
                 color: this.options.region.empire.color,
             })
             this.addChild(empire)
+        } else if (this.options.region.empire) {
+            // g.tint = this.options.region.empire.color
         }
     }
 

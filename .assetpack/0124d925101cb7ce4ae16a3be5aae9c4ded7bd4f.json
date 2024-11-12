@@ -1,0 +1,2857 @@
+{
+    "assets": {
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets": {
+            "isFolder": true,
+            "metaData": {},
+            "inheritedMetaData": {},
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}": {
+            "isFolder": true,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets",
+            "metaData": {
+                "m": true
+            },
+            "inheritedMetaData": {},
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings": {
+            "isFolder": true,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}": {
+            "isFolder": true,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings",
+            "metaData": {
+                "tps": true
+            },
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}/CyanBarracks.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "pCCJ"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}/CyanChapels.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "00FLqw"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}/CyanDocks.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "6xbbgQ"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}/CyanHouses.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "W8EYSQ"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}/CyanHuts.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "5ToHnA"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}/CyanKeep.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "O4uO-A"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}/CyanMarket.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "38RwGA"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}/CyanResources.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "HQMXnw"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}/CyanShip.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "gewwVw"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}/CyanTaverns.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "pVuveA"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}/CyanTower.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "eR7I"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}/CyanWell.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "elemmg"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}/CyanWorkshops.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "uzACYA"
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Cyan.png": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "fix": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/mipmap/game{m}/buildings/Cyan.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Cyan.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Cyan.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Cyan.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Cyan-1tSJeQ.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Cyan.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Cyan-1tSJeQ.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Cyan-1tSJeQ.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Cyan.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Cyan.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Cyan-0GHuHQ.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Cyan.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Cyan-0GHuHQ.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Cyan-0GHuHQ.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Cyan.json": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Cyan.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Cyan.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Cyan.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Cyan.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Cyan-YRZNeQ.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Cyan.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Cyan-fd8SXw.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Cyan-YRZNeQ.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Cyan.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Cyan.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Cyan.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Cyan.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Cyan-hJyhKw.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Cyan.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Cyan-uBUtKw.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Cyan-hJyhKw.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Cyan@0.5x.png": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "fix": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/mipmap/game{m}/buildings/Cyan@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Cyan@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Cyan@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Cyan@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Cyan-sI45Aw@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Cyan@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Cyan-sI45Aw@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Cyan-sI45Aw@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Cyan@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Cyan@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Cyan-Mxeh5Q@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Cyan@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Cyan-Mxeh5Q@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Cyan-Mxeh5Q@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Cyan@0.5x.json": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Cyan{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Cyan@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Cyan@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Cyan@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Cyan@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Cyan-uLhMlg@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Cyan@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Cyan-8xxKhQ@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Cyan-uLhMlg@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Cyan@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Cyan@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Cyan@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Cyan@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Cyan-NXSAog@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Cyan@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Cyan-lzn8jw@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Cyan-NXSAog@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}": {
+            "isFolder": true,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings",
+            "metaData": {
+                "tps": true
+            },
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}/LimeBarracks.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "U0VXEA"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}/LimeChapels.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "Y3ueNA"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}/LimeDocks.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "HwK6"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}/LimeHouses.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "e5Z12w"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}/LimeHuts.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "UcDLbw"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}/LimeKeep.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "dUww0Q"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}/LimeMarket.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "i-j0fg"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}/LimeResources.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "LETnZw"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}/LimeShip.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "SMen4g"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}/LimeTaverns.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "7tnm4g"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}/LimeTower.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "8BuWPA"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}/LimeWell.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "0sV8Tg"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}/LimeWorkshops.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "7Rdk6A"
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Lime.png": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "fix": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/mipmap/game{m}/buildings/Lime.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Lime.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Lime.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Lime.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Lime-zd7THQ.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Lime.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Lime-zd7THQ.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Lime-zd7THQ.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Lime.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Lime.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Lime-PuIUAQ.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Lime.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Lime-PuIUAQ.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Lime-PuIUAQ.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Lime.json": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Lime.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Lime.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Lime.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Lime.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Lime-UdBNMg.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Lime.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Lime-jPEdHA.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Lime-UdBNMg.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Lime.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Lime.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Lime.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Lime.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Lime-ZaL_Mw.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Lime.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Lime-RUfCzA.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Lime-ZaL_Mw.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Lime@0.5x.png": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "fix": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/mipmap/game{m}/buildings/Lime@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Lime@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Lime@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Lime@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Lime-oXJ-QA@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Lime@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Lime-oXJ-QA@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Lime-oXJ-QA@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Lime@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Lime@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Lime-16iHZw@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Lime@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Lime-16iHZw@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Lime-16iHZw@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Lime@0.5x.json": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Lime{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Lime@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Lime@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Lime@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Lime@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Lime-Kytb3A@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Lime@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Lime-IYaQ6g@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Lime-Kytb3A@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Lime@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Lime@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Lime@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Lime@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Lime-o-67Ow@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Lime@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Lime-hNPM6A@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Lime-o-67Ow@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}": {
+            "isFolder": true,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings",
+            "metaData": {
+                "tps": true
+            },
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}/PurpleBarracks.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "L4mTjA"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}/PurpleChapels.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "6hMWiQ"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}/PurpleDocks.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "UDV_5Q"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}/PurpleHouses.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "tqlBYw"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}/PurpleHuts.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "buCV"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}/PurpleKeep.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "laIyYw"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}/PurpleMarket.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "8tSz7w"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}/PurpleResources.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "Gyo4nQ"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}/PurpleShip.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "ulcuaQ"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}/PurpleTaverns.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "efzDTg"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}/PurpleTower.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "gK4QGA"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}/PurpleWell.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "djnUdA"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}/PurpleWorkshops.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "6mzUAQ"
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Purple.png": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "fix": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/mipmap/game{m}/buildings/Purple.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Purple.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Purple.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Purple.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Purple-lV5mUQ.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Purple.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Purple-lV5mUQ.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Purple-lV5mUQ.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Purple.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Purple.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Purple-k7lnIg.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Purple.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Purple-k7lnIg.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Purple-k7lnIg.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Purple.json": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Purple.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Purple.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Purple.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Purple.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Purple-gMGlxw.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Purple.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Purple-UxDwgg.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Purple-gMGlxw.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Purple.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Purple.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Purple.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Purple.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Purple-qKToSA.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Purple.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Purple-vKdyag.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Purple-qKToSA.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Purple@0.5x.png": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "fix": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/mipmap/game{m}/buildings/Purple@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Purple@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Purple@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Purple@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Purple-UHdJrw@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Purple@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Purple-UHdJrw@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Purple-UHdJrw@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Purple@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Purple@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Purple--B5-PQ@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Purple@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Purple--B5-PQ@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Purple--B5-PQ@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Purple@0.5x.json": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Purple{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Purple@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Purple@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Purple@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Purple@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Purple-2Tsaxg@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Purple@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Purple-uloRkA@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Purple-2Tsaxg@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Purple@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Purple@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Purple@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Purple@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Purple-Xn5SAA@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Purple@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Purple-yeHCEQ@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Purple-Xn5SAA@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}": {
+            "isFolder": true,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings",
+            "metaData": {
+                "tps": true
+            },
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}/RedBarracks.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "XPpnLg"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}/RedChapels.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "1dgv"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}/RedDocks.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "QeuKfA"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}/RedHouses.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "bi-7lA"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}/RedHuts.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "SSu_Ew"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}/RedKeep.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "6bUJfA"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}/RedMarket.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "b2F-"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}/RedResources.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "jDRbyA"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}/RedShip.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "IWhj"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}/RedTaverns.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "UIsGvA"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}/RedTower.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "mn7Xcg"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}/RedWell.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "uc0Wxw"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}/RedWorkshops.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "WVz3mQ"
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Red.png": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "fix": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/mipmap/game{m}/buildings/Red.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Red.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Red.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Red.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Red-2nNbBA.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Red.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Red-2nNbBA.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Red-2nNbBA.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Red.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Red.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Red-gK1VJQ.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Red.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Red-gK1VJQ.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Red-gK1VJQ.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Red.json": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Red.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Red.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Red.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Red.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Red-0JRRBQ.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Red.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Red-Z4nd2w.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Red-0JRRBQ.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Red.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Red.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Red.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Red.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Red-3Z4eIA.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Red.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Red-UWWQqQ.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Red-3Z4eIA.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Red@0.5x.png": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "fix": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/mipmap/game{m}/buildings/Red@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Red@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Red@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Red@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Red-3QbCFw@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Red@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Red-3QbCFw@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Red-3QbCFw@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Red@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Red@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Red-OjnK_g@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Red@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Red-OjnK_g@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Red-OjnK_g@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Red@0.5x.json": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Red{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Red@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Red@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Red@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Red@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Red-2mVuTg@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Red@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Red-Qp5LQw@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Red-2mVuTg@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Red@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Red@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Red@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Red@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Red-vR4HZg@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Red@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Red-UmZovg@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Red-vR4HZg@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}": {
+            "isFolder": true,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings",
+            "metaData": {
+                "tps": true
+            },
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}/Barracks.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "vqB91A"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}/CaveV2.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "7cBt2g"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}/Chapels.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "sdl5"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}/Docks.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "Uvm3VQ"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}/Houses.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "r2Enpg"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}/Huts.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "uBxkVg"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}/Keep.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "veSwig"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}/Market.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "PdJAxQ"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}/Resources.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "1vDqKQ"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}/Taverns.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "4N6LHQ"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}/Tower.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "KxxC"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}/Tower2.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "G5qVXw"
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}/Workshops.png": {
+            "isFolder": false,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "GWuOrQ"
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Wood.png": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "fix": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/mipmap/game{m}/buildings/Wood.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Wood.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Wood.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Wood.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Wood-QA5ypQ.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Wood.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Wood-QA5ypQ.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Wood-QA5ypQ.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Wood.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Wood.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Wood--YuIiA.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Wood.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Wood--YuIiA.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Wood--YuIiA.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Wood.json": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Wood.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Wood.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Wood.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Wood.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Wood-wGjW.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Wood.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Wood-MeM2zQ.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Wood-wGjW.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Wood.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Wood.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Wood.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Wood.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Wood-Q1MS7w.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Wood.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Wood-PZO28Q.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Wood-Q1MS7w.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Wood@0.5x.png": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "fix": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/mipmap/game{m}/buildings/Wood@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Wood@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Wood@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Wood@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Wood-w6cM-g@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Wood@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Wood-w6cM-g@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Wood-w6cM-g@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/buildings/Wood@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/game{m}/buildings/Wood@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Wood-_cYDjA@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/buildings/Wood@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Wood-_cYDjA@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Wood-_cYDjA@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "fix": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/game{m}/buildings/Wood@0.5x.json": {
+            "isFolder": false,
+            "transformParent": "/Users/valor/learn/games/miniplex-pixi/raw-assets/game{m}/buildings/Wood{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Wood@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Wood@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Wood@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Wood@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Wood-SYXdBg@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Wood@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Wood-8GH5fQ@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Wood-SYXdBg@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/buildings/Wood@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/buildings/Wood@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/buildings/Wood@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/buildings/Wood@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/buildings/Wood-QV9Flg@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/buildings/Wood@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/public/assets/game/buildings/Wood-7jZOVA@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/buildings/Wood-QV9Flg@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "/Users/valor/learn/games/miniplex-pixi/raw-assets/preload{m}": {
+            "isFolder": true,
+            "parent": "/Users/valor/learn/games/miniplex-pixi/raw-assets",
+            "metaData": {
+                "m": true
+            },
+            "inheritedMetaData": {},
+            "transformData": {}
+        }
+    }
+}

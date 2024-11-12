@@ -1,9 +1,15 @@
 import { createNoise2D, NoiseFunction2D } from 'simplex-noise'
 import Alea from 'alea'
 import { Map, RNG } from 'rot-js'
-import { Region, Empire, MapData, Biome, Terrain } from './objects'
+import {
+    Region,
+    Empire,
+    MapData,
+    Biome,
+    Terrain,
+    EmpireColors,
+} from './objects'
 import { shuffle, randomPick } from '../utils/shuffle'
-import { nameColors } from '../utils/colors'
 
 const defaultSeeds = {
     terrain: 0.523804631364627,
@@ -25,9 +31,14 @@ type CreateOptions = {
     empires: number
 }
 
+const empireColors: EmpireColors[] = ['Cyan', 'Lime', 'Purple', 'Red', 'Wood']
+
 function placeEmpires(count: number, cells: Region[]) {
+    if (count > 5) {
+        throw new Error('Too many empires, maximum 5')
+    }
     const empires: Empire[] = []
-    const colors = shuffle(nameColors)()
+    const colors: EmpireColors[] = shuffle(empireColors)()
     const available = cells.filter(
         (x) => x.terrain.biome === 'grass' && x.empire === undefined
     )
@@ -42,7 +53,7 @@ function placeEmpires(count: number, cells: Region[]) {
             color: colors[i],
             economy: 1,
             technology: 1,
-            labors: 10,
+            labors: 1,
             stability: 1,
             borderEmpires: new Set<Empire>(),
             age: 0,
