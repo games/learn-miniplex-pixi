@@ -8,11 +8,18 @@ but later on I wanna change to
 
 https://en.wikipedia.org/wiki/Master_of_Orion
 
-1, generate a maps randomly with
-   - 
+1, map generation
+2, settlement placement
+3, 
 
 ========
 
+
+## map generation
+
+https://www.youtube.com/watch?v=wbpMiKiSKm8&list=PLFt_AvWsXl0eBW2EiBtl_sxmDtSgZBxB3
+
+https://discussions.unity.com/t/unannounced-game-devlog-current-topic-3d-map-tile-implementation/652617/2
 
 ### map editor
 
