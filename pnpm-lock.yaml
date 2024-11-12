@@ -20,6 +20,9 @@ importers:
       honeycomb-grid:
         specifier: ^4.1.5
         version: 4.1.5
+      lil-gui:
+        specifier: ^0.20.0
+        version: 0.20.0
       miniplex:
         specifier: ^2.0.0
         version: 2.0.0
@@ -417,6 +420,9 @@ packages:
 
   ismobilejs@1.1.1:
     resolution: {integrity: sha512-VaFW53yt8QO61k2WJui0dHf4SlL8lxBofUuUmwBo0ljPk0Drz2TiuDW4jo3wDcv41qy/SxrJ+VAzJ/qYqsmzRw==}
+
+  lil-gui@0.20.0:
+    resolution: {integrity: sha512-k7Ipr0ztqslMA2XvM5z5ZaWhxQtnEOwJBfI/hmSuRh6q4iMG9L0boqqrnZSzBR1jzyJ28OMl47l65ILzRe1TdA==}
 
   loupe@3.1.2:
     resolution: {integrity: sha512-23I4pFZHmAemUnz8WZXbYRSKYj801VDaNv9ETuMh7IrMc7VuVVSo+Z9iLE3ni30+U48iDWfi30d3twAXBYmnCg==}
@@ -846,6 +852,8 @@ snapshots:
   honeycomb-grid@4.1.5: {}
 
   ismobilejs@1.1.1: {}
+
+  lil-gui@0.20.0: {}
 
   loupe@3.1.2: {}
 

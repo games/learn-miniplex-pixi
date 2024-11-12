@@ -22,9 +22,10 @@
     "alea": "^1.0.1",
     "fp-ts": "^2.16.9",
     "honeycomb-grid": "^4.1.5",
+    "lil-gui": "^0.20.0",
     "miniplex": "^2.0.0",
-    "pixi.js": "^8.5.2",
     "pixi-viewport": "^5.0.3",
+    "pixi.js": "^8.5.2",
     "rot-js": "^2.2.0",
     "simplex-noise": "^4.0.3",
     "typed-signals": "^3.0.0"
