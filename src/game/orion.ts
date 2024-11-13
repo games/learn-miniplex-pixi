@@ -15,12 +15,18 @@ type Actor = {
     ai: boolean
 }
 
+type Vector = {
+    x: number
+    y: number
+}
+
 type Planet = {
     name: string
     population: number
     resources: number
     owner?: string
     fleet?: Ship[]
+    location: Vector
 }
 
 type Ship = {
@@ -29,7 +35,8 @@ type Ship = {
     firepower: number
     defense: number
     owner: string
-    location: string
+    planet: string
+    location?: Vector
 }
 
 type Terrain = ''
@@ -37,7 +44,7 @@ type Terrain = ''
 type Map = {
     width: number
     height: number
-    terrain: Terrain
+    terrains: Terrain[]
 }
 
 type GameState = {
@@ -45,10 +52,17 @@ type GameState = {
     actors: Actor[]
     planets: Planet[]
     ships: Ship[]
+    map: Map
 }
 
 const init = (): GameState => {
+    const map = {
+        width: 10,
+        height: 10,
+        terrains: [],
+    }
     return {
+        map,
         currentActor: 0,
         actors: [
             { name: 'Humans', homeworld: 'Earth', ai: false, energy: 4 },
@@ -56,19 +70,57 @@ const init = (): GameState => {
             { name: 'Silicoids', homeworld: 'Cryslon', ai: true, energy: 4 },
         ],
         planets: [
-            { name: 'Earth', population: 100, resources: 100, owner: 'Humans' },
-            { name: 'Mars', population: 0, resources: 500, owner: 'Bulrathi' },
+            {
+                name: 'Earth',
+                population: 100,
+                resources: 100,
+                owner: 'Humans',
+                location: { x: 0, y: 0 },
+            },
+            {
+                name: 'Mars',
+                population: 0,
+                resources: 500,
+                owner: 'Bulrathi',
+                location: { x: 1, y: 0 },
+            },
             {
                 name: 'Venus',
                 population: 0,
                 resources: 1000,
                 owner: 'Silicoids',
+                location: { x: 0, y: 1 },
             },
-            { name: 'Jupiter', population: 0, resources: 2000 },
-            { name: 'Saturn', population: 0, resources: 3000 },
-            { name: 'Uranus', population: 0, resources: 4000 },
-            { name: 'Neptune', population: 0, resources: 5000 },
-            { name: 'Pluto', population: 0, resources: 6000 },
+            {
+                name: 'Jupiter',
+                population: 0,
+                resources: 2000,
+                location: { x: 1, y: 1 },
+            },
+            {
+                name: 'Saturn',
+                population: 0,
+                resources: 3000,
+                location: { x: 2, y: 1 },
+            },
+            {
+                name: 'Uranus',
+                population: 0,
+                resources: 4000,
+                location: { x: 3, y: 1 },
+            },
+            {
+                name: 'Neptune',
+                population: 0,
+                resources: 5000,
+                location: { x: 4, y: 1 },
+            },
+            {
+                name: 'Pluto',
+                population: 0,
+                resources: 6000,
+                location: { x: 5, y: 1 },
+            },
         ],
         ships: [
             {
@@ -77,7 +129,7 @@ const init = (): GameState => {
                 firepower: 1,
                 defense: 1,
                 owner: 'Humans',
-                location: 'Earth',
+                planet: 'Earth',
             },
             {
                 name: 'Scout',
@@ -85,7 +137,7 @@ const init = (): GameState => {
                 firepower: 1,
                 defense: 1,
                 owner: 'Bulrathi',
-                location: 'Mars',
+                planet: 'Mars',
             },
             {
                 name: 'Scout',
@@ -93,7 +145,7 @@ const init = (): GameState => {
                 firepower: 1,
                 defense: 1,
                 owner: 'Silicoids',
-                location: 'Venus',
+                planet: 'Venus',
             },
         ],
     }
@@ -144,7 +196,6 @@ const actions: Record<string, Action> = {
 }
 
 const delta = 16.6
-
 
 let state = init()
 
