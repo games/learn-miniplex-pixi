@@ -1,6 +1,5 @@
 import { Bucket, World } from 'miniplex'
 import { Application, ApplicationOptions, Container, Ticker } from 'pixi.js'
-import { renderingSystem } from './rendering'
 import { type StateManager, stateManager } from './state'
 
 export type RenderableNode = {
@@ -29,7 +28,6 @@ export async function start<TEntity extends Node>(
 
     const world = new World<TEntity>()
     const systems = new Bucket<System>()
-    const rendering = renderingSystem(world, application)
 
     const engine = {
         application,
@@ -44,8 +42,5 @@ export async function start<TEntity extends Node>(
         for (const system of systems) {
             system(ticker)
         }
-
-        // rendering system always run after all other systems
-        rendering()
     })
 }
