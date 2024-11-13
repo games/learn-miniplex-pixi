@@ -1,5 +1,5 @@
 import { Container } from 'pixi.js'
-import { MapData } from '../../game/objects'
+import { MapData } from '../../objects'
 import { Cell } from './Cell'
 import {
     defineHex,

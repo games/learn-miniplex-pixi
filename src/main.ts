@@ -1,7 +1,8 @@
 import './style.css'
 import * as engine from './systems/engine'
-import { loading } from './states/loading'
-import { game } from './states/game'
+import { loading } from './games/4x/states/loading'
+import { game } from './games/4x/states/game'
+import { Entity } from './games/4x/entity'
 
 const options = {
     width: 800,
@@ -11,7 +12,7 @@ const options = {
     resizeTo: window,
 }
 
-engine.start(options, async (world, _systems) => {
+engine.start<Entity>(options, async (world, _systems) => {
     const [{ engine }] = world.with('engine')
 
     await engine.state.enter(loading(world))

@@ -2,7 +2,7 @@ import { World } from 'miniplex'
 import { Entity } from '../entity'
 import { Ticker } from 'pixi.js'
 import { Map } from '../views/hexagons/Map'
-import { Region, Empire } from '../game/objects'
+import { Region, Empire } from '../objects'
 import { randomRange } from 'fp-ts/lib/Random'
 
 export function campaign(world: World<Entity>) {

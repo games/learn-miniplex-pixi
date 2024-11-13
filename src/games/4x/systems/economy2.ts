@@ -56,7 +56,7 @@ export function economy(world: World<Entity>) {
         if (ticker.lastTime - lastUpdate < 1000) {
             return
         }
-        const delta = ticker.lastTime - lastUpdate
+        // const delta = ticker.lastTime - lastUpdate
         lastUpdate = ticker.lastTime
         for (const { empire } of entities) {
             const labors =

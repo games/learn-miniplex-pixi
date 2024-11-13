@@ -1,12 +1,6 @@
-import { Application, Container, type PointData } from 'pixi.js'
-import { Region, Empire, MapData } from './game/objects'
-import type { StateManager } from './systems/state'
-
-export type EntityTags = 'city' | 'empireStats' | 'map'
-
-export type RenderableEntity = {
-    view: Container
-}
+import { type PointData } from 'pixi.js'
+import { Region, Empire, MapData } from './objects'
+import { Node } from '../../systems/engine'
 
 export type EmpireStatsPanelEntity = {
     empireStats: {
@@ -35,14 +29,7 @@ export type GameTimeEntity = {
     }
 }
 
-export type Entity = {
-    parent?: Entity
-    engine?: {
-        application: Application
-        state: StateManager
-    }
-    tag?: EntityTags
-} & Partial<RenderableEntity> &
+export type Entity = Node &
     Partial<GameTimeEntity> &
     Partial<EmpireStatsPanelEntity> &
     Partial<EmpireEntity> &

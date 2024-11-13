@@ -1,42 +1,41 @@
 import { Bucket, World } from 'miniplex'
-import { Application, ApplicationOptions, Ticker } from 'pixi.js'
+import { Application, ApplicationOptions, Container, Ticker } from 'pixi.js'
 import { renderingSystem } from './rendering'
-import { stateManager } from './state'
-import { empireStats } from './empireStats'
-import { Entity } from '../entity'
-import { time } from './time'
-import { economy } from './economy2'
-import { expanding } from './expanding'
-import { conquer } from './conquer'
-import { campaign } from './campaign'
+import { type StateManager, stateManager } from './state'
+
+export type RenderableNode = {
+    view: Container
+}
+
+export type Node = {
+    parent?: Node
+    engine?: {
+        application: Application
+        state: StateManager
+    }
+} & Partial<RenderableNode>
 
 export type System = (ticker: Ticker) => void
 
 type EngineOptions = {} & Partial<ApplicationOptions>
 
-export async function start(
+export async function start<TEntity extends Node>(
     options: EngineOptions,
-    init: (world: World<Entity>, systems: Bucket<System>) => Promise<void>
+    init: (world: World<TEntity>, systems: Bucket<System>) => Promise<void>
 ) {
     const application = new Application()
     await application.init(options)
     document.body.appendChild(application.canvas)
 
-    const world = new World<Entity>()
+    const world = new World<TEntity>()
     const systems = new Bucket<System>()
-    systems.add(time(world))
-    systems.add(empireStats(world))
-    systems.add(economy(world))
-    // systems.add(expanding(world))
-    // systems.add(conquer(world))
-    // systems.add(campaign(world))
-    systems.add(renderingSystem(world, application))
+    const rendering = renderingSystem(world, application)
 
     const engine = {
         application,
         state: stateManager(),
     }
-    world.add({ engine })
+    world.add({ engine } as TEntity)
 
     await init(world, systems)
 
@@ -45,5 +44,8 @@ export async function start(
         for (const system of systems) {
             system(ticker)
         }
+
+        // rendering system always run after all other systems
+        rendering()
     })
 }

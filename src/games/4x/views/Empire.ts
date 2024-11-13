@@ -1,5 +1,5 @@
 import { Container, Sprite } from 'pixi.js'
-import { EmpireColors } from '../game/objects'
+import { EmpireColors } from '../objects'
 import { capital } from './tiles'
 
 type EmpireOptions = {

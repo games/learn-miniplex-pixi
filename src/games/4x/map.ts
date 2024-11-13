@@ -9,7 +9,7 @@ import {
     Terrain,
     EmpireColors,
 } from './objects'
-import { shuffle, randomPick } from '../utils/shuffle'
+import { shuffle, randomPick } from '../../utils/shuffle'
 
 const defaultSeeds = {
     terrain: 0.523804631364627,

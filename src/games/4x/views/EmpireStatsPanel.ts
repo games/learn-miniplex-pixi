@@ -1,6 +1,6 @@
 import { Graphics, Text } from 'pixi.js'
 import { Layout } from '@pixi/layout'
-import { Region } from '../game/objects'
+import { Region } from '../objects'
 
 function text() {
     return new Text({

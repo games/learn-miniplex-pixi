@@ -1,5 +1,5 @@
 import { ColorSource, Container, Graphics, GraphicsContext } from 'pixi.js'
-import { Region } from '../../game/objects'
+import { Region } from '../../objects'
 import { Empire } from '../Empire'
 
 type CellOptions = {
